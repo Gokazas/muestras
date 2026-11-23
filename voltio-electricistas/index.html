@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0F1B2D">
+<title>Voltio · Electricistas en Las Rozas y la Sierra de Guadarrama</title>
+<meta name="description" content="Voltio: instalaciones eléctricas, reformas eléctricas y cargadores para coche eléctrico en Las Rozas y la Sierra de Guadarrama.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23F5B700'/%3E%3Cpath d='M18 5 8.5 18h6l-1.5 9L22.5 14h-6z' fill='%230F1B2D'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<script>document.documentElement.className += " js";</script>
+<style>
+:root{
+  --night:#0F1B2D; --night-2:#15263E; --night-3:#1F3554; --deep:#0A1320;
+  --bg:#F5F7FA; --card:#FFFFFF; --line:#DCE3EC;
+  --ink:#0F1B2D; --text:#27364A; --muted:#566579;
+  --yellow:#F5B700; --yellow-2:#FFC929; --yellow-ink:#1A1400;
+  --wa:#25D366; --wa-2:#3BE07A; --wa-ink:#06281A;
+  --on-dark:#EAF0F7; --on-dark-muted:#A9B8CB;
+  --r:16px;
+  --font-d:"Space Grotesk","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --font-b:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;font-family:var(--font-b);font-size:1rem;line-height:1.6;color:var(--text);background:var(--bg);overflow-x:clip;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--font-d);color:var(--ink);line-height:1.15;margin:0;letter-spacing:-.01em}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+a{color:inherit}
+svg{display:block}
+button{font:inherit}
+.wrap{width:min(1120px,calc(100% - 32px));margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+:focus-visible{outline:3px solid var(--night);outline-offset:3px;border-radius:6px}
+.dark :focus-visible,.dark:focus-visible{outline-color:var(--yellow)}
+section[id]{scroll-margin-top:68px}
+
+/* Iconos */
+.ic{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* Huecos de texto */
+.gap{background:rgba(245,183,0,.18);border-bottom:1.5px dotted #8A6800;color:#4A3900;padding:1px 4px;border-radius:4px 4px 0 0;font-size:.92em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.dark .gap{background:rgba(245,183,0,.14);border-bottom-color:var(--yellow);color:#FFDC73}
+
+/* Botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:10px 22px;border:2px solid transparent;border-radius:14px;font-family:var(--font-b);font-weight:600;font-size:1rem;line-height:1.2;text-align:center;text-decoration:none;cursor:pointer;transition:background-color .15s ease,transform .15s ease,box-shadow .15s ease}
+.btn:active{transform:translateY(1px)}
+.btn--call{background:var(--yellow);color:var(--yellow-ink);box-shadow:0 6px 18px rgba(245,183,0,.22)}
+.btn--call:hover{background:var(--yellow-2)}
+.btn--wa{background:var(--wa);color:var(--wa-ink);box-shadow:0 6px 18px rgba(37,211,102,.18)}
+.btn--wa:hover{background:var(--wa-2)}
+.btn--ghost{border-color:rgba(255,255,255,.35);color:#fff;background:transparent}
+.btn--ghost:hover{background:rgba(255,255,255,.08)}
+.btn--line{border-color:var(--line);color:var(--ink);background:#fff}
+.btn--line:hover{border-color:var(--ink)}
+
+/* Banda de vista previa */
+.preview{background:var(--deep);color:#8493A8;font-size:.72rem;letter-spacing:.06em;text-align:center;padding:6px 12px;line-height:1.3}
+
+/* Cabecera */
+.hdr{position:sticky;top:0;z-index:40;background:rgba(15,27,45,.95);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08);color:var(--on-dark)}
+.hdr__in{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px}
+.logo{display:inline-flex;align-items:center;gap:10px;text-decoration:none;min-height:44px}
+.logo__mark{width:36px;height:36px;border-radius:10px;background:var(--yellow);color:var(--night);display:grid;place-items:center;flex:none}
+.logo__mark .ic{width:20px;height:20px}
+.logo__txt{display:grid;line-height:1}
+.logo__txt b{font-family:var(--font-d);font-weight:700;font-size:1.06rem;color:#fff;letter-spacing:.01em}
+.logo__txt i{font-style:normal;font-family:var(--font-d);font-weight:600;font-size:.68rem;letter-spacing:.34em;text-transform:uppercase;color:var(--yellow);margin-top:4px}
+.nav{display:none}
+.hdr__call{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:44px;min-height:44px;padding:0 12px;border-radius:12px;background:var(--yellow);color:var(--yellow-ink);font-weight:600;font-size:.94rem;text-decoration:none;white-space:nowrap}
+.hdr__call:hover{background:var(--yellow-2)}
+.hdr__call span{display:none}
+
+/* Portada */
+.hero{position:relative;isolation:isolate;overflow:hidden;color:var(--on-dark);background:radial-gradient(700px 420px at 92% -8%,rgba(245,183,0,.14),transparent 62%),linear-gradient(180deg,var(--night) 0%,#0C1626 100%)}
+.hero__circuit{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
+.hero__in{display:grid;gap:34px;padding:26px 0 46px}
+.hero__txt{min-width:0}
+.badge{display:inline-flex;align-items:center;gap:7px;padding:6px 13px 6px 10px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);font-size:.86rem;color:#DDE6F1;margin-bottom:16px;line-height:1.3}
+.badge b{font-family:var(--font-d);font-size:1rem;color:#fff}
+.badge .ic{width:17px;height:17px;color:var(--yellow)}
+.hero h1{color:#fff;font-size:clamp(1.85rem,8.3vw,3.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.08}
+.hero h1 em{font-style:normal;color:var(--yellow)}
+.hero__sub{margin-top:14px;font-size:1.05rem;line-height:1.55;color:#C9D5E3;max-width:36ch}
+.cta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+.cta .btn{padding-inline:12px}
+.hero__meta{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:16px;font-size:.9rem;color:var(--on-dark-muted)}
+.hero__meta a{color:#fff;font-weight:600;text-decoration:none;white-space:nowrap;display:inline-flex;align-items:center;min-height:32px}
+.hero__meta span{display:inline-flex;align-items:center;gap:6px;min-height:32px}
+.hero__meta .ic{width:16px;height:16px;color:var(--yellow)}
+
+/* Huecos de foto */
+.photo{position:relative;isolation:isolate;overflow:hidden;display:grid;place-items:center;margin:0;border-radius:18px;aspect-ratio:4/3;color:#DCE6F2;background:linear-gradient(145deg,#1D3352 0%,#0F1B2D 72%);border:1px solid rgba(255,255,255,.1)}
+.photo::before{content:"";position:absolute;inset:0;z-index:-1;background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);background-size:22px 22px;-webkit-mask-image:radial-gradient(circle at 50% 45%,#000 25%,transparent 82%);mask-image:radial-gradient(circle at 50% 45%,#000 25%,transparent 82%)}
+.photo::after{content:"";position:absolute;inset:10px;pointer-events:none;opacity:.38;
+  background:
+   linear-gradient(currentColor,currentColor) left top/14px 1.5px no-repeat,
+   linear-gradient(currentColor,currentColor) left top/1.5px 14px no-repeat,
+   linear-gradient(currentColor,currentColor) right top/14px 1.5px no-repeat,
+   linear-gradient(currentColor,currentColor) right top/1.5px 14px no-repeat,
+   linear-gradient(currentColor,currentColor) left bottom/14px 1.5px no-repeat,
+   linear-gradient(currentColor,currentColor) left bottom/1.5px 14px no-repeat,
+   linear-gradient(currentColor,currentColor) right bottom/14px 1.5px no-repeat,
+   linear-gradient(currentColor,currentColor) right bottom/1.5px 14px no-repeat}
+.photo--light{color:#22395A;background:linear-gradient(145deg,#F1F4F9 0%,#D5DFEC 100%);border-color:var(--line)}
+.photo--light::before{background-image:linear-gradient(rgba(15,27,45,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(15,27,45,.06) 1px,transparent 1px)}
+.photo--warm{color:#2B2100;background:linear-gradient(145deg,#FFF3CC 0%,#F9D462 100%);border-color:#F1D27A}
+.photo--warm::before{background-image:linear-gradient(rgba(60,45,0,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(60,45,0,.07) 1px,transparent 1px)}
+.art{width:74%;height:auto;max-height:80%;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.art .y{stroke:var(--yellow)}
+.art .yf{fill:var(--yellow);stroke:none}
+.art .yw{fill:rgba(245,183,0,.28);stroke:var(--yellow)}
+.art .soft{opacity:.45}
+.photo--light .y{stroke:#C98F00}
+.photo--light .yf{fill:#E0A400}
+.photo--warm .y{stroke:#0F1B2D}
+.photo--warm .yf{fill:#0F1B2D}
+.photo__tag{position:absolute;left:12px;bottom:12px;max-width:calc(100% - 24px);display:inline-flex;align-items:center;gap:6px;padding:6px 11px 6px 9px;border-radius:999px;background:rgba(10,19,32,.62);color:#EAF0F7;font-size:.74rem;font-weight:500;line-height:1.2;letter-spacing:.01em}
+.photo__tag .ic{width:14px;height:14px}
+.photo--light .photo__tag,.photo--warm .photo__tag{background:rgba(255,255,255,.82);color:#27364A}
+.photo--hero{aspect-ratio:10/7;border-radius:22px;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.photo--hero .art{width:90%;max-height:86%}
+
+/* Secciones */
+.sec{padding:56px 0}
+.sec--white{background:#fff}
+.sec__head{max-width:640px;margin-bottom:28px}
+.eyebrow{display:flex;align-items:center;gap:10px;font-size:.78rem;font-weight:600;line-height:1.2;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.eyebrow::before{content:"";width:24px;height:2px;border-radius:2px;background:var(--yellow);flex:none}
+.sec h2{font-size:clamp(1.6rem,5.8vw,2.35rem);font-weight:700;letter-spacing:-.02em}
+.lead{margin-top:10px;color:var(--muted);font-size:1.03rem}
+
+/* Servicios */
+.svcs{display:grid;gap:12px}
+.svc{display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:start;padding:18px;background:var(--card);border:1px solid var(--line);border-radius:var(--r)}
+.svc__ic{width:48px;height:48px;border-radius:13px;background:var(--night);color:var(--yellow);display:grid;place-items:center}
+.svc__ic .ic{width:24px;height:24px}
+.svc h3{font-size:1.08rem;font-weight:600;margin-bottom:5px}
+.svc p{font-size:.96rem;color:var(--muted);line-height:1.55}
+.svc--ev{border-color:#E9C24A;background:linear-gradient(180deg,#FFFBEC,#FFF6D6)}
+.svc--ev .svc__ic{background:var(--yellow);color:var(--night)}
+.svc--ev p{color:#4C4A40}
+.more{display:inline-flex;align-items:center;gap:6px;min-height:44px;margin-bottom:-10px;font-weight:600;font-size:.95rem;color:var(--ink);text-underline-offset:4px;text-decoration-color:var(--yellow);text-decoration-thickness:2px}
+.svc-extra{margin-top:16px;padding:14px 16px;border:1.5px dashed #C9D2DE;border-radius:14px;font-size:.95rem;color:var(--muted);display:flex;gap:10px;align-items:center}
+.svc-extra .ic{color:var(--muted)}
+
+/* Banda del cargador */
+.ev{position:relative;isolation:isolate;overflow:hidden;padding:56px 0;color:var(--on-dark);background:radial-gradient(520px 340px at 0% 100%,rgba(245,183,0,.12),transparent 65%),linear-gradient(135deg,#0F1B2D 0%,#16294A 100%);border-top:3px solid var(--yellow)}
+.ev__deco{position:absolute;right:-56px;top:-40px;width:250px;height:250px;z-index:-1;fill:none;stroke:var(--yellow);stroke-width:1.5;opacity:.16}
+.ev__in{display:grid;gap:30px}
+.ev .eyebrow{color:var(--yellow)}
+.ev h2{color:#fff;font-size:clamp(1.75rem,6.6vw,2.6rem);font-weight:700;letter-spacing:-.02em}
+.ev h2 em{font-style:normal;color:var(--yellow)}
+.ev__lead{margin-top:14px;font-size:1.08rem;color:#D3DDEA;max-width:40ch}
+.ev__cta{display:grid;gap:10px;margin-top:24px}
+.steps-ev{display:grid;gap:12px;counter-reset:ev}
+.steps-ev li{position:relative;counter-increment:ev;padding:16px 16px 16px 66px;min-height:68px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.12);border-radius:var(--r)}
+.steps-ev li::before{content:counter(ev);position:absolute;left:16px;top:16px;width:36px;height:36px;border-radius:50%;background:var(--yellow);color:var(--yellow-ink);font-family:var(--font-d);font-weight:700;font-size:1.05rem;line-height:36px;text-align:center}
+.steps-ev li:not(:last-child)::after{content:"";position:absolute;left:33px;top:52px;bottom:-13px;width:2px;background:linear-gradient(var(--yellow),rgba(245,183,0,.15))}
+.steps-ev h3{color:#fff;font-size:1.06rem;font-weight:600}
+.steps-ev p{margin-top:3px;font-size:.95rem;color:var(--on-dark-muted)}
+
+/* Por qué nosotros */
+.why{display:grid;gap:14px}
+.rating{display:grid;align-content:center;gap:6px;padding:24px;border-radius:20px;color:var(--on-dark);background:radial-gradient(300px 200px at 100% 0%,rgba(245,183,0,.16),transparent 70%),var(--night)}
+.rating__n{font-family:var(--font-d);font-weight:700;font-size:3.6rem;line-height:1;color:#fff;letter-spacing:-.03em}
+.rating__stars{display:flex;gap:3px;color:var(--yellow)}
+.rating__stars .ic{width:22px;height:22px}
+.rating__t{font-size:1rem;color:#DDE6F1;font-weight:500;margin-top:4px}
+.rating__s{font-size:.88rem;color:var(--on-dark-muted)}
+.points{display:grid;gap:12px}
+.point{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:18px;background:var(--bg);border:1px solid var(--line);border-radius:var(--r)}
+.point__ic{width:44px;height:44px;border-radius:50%;background:#fff;border:1.5px solid var(--yellow);color:var(--ink);display:grid;place-items:center}
+.point h3{font-size:1.06rem;font-weight:600;margin-bottom:4px}
+.point p{font-size:.96rem;color:var(--muted)}
+
+/* Cómo trabajamos */
+.steps{display:grid;gap:12px;counter-reset:st}
+.steps li{position:relative;counter-increment:st;padding:20px 18px 20px 76px;background:var(--card);border:1px solid var(--line);border-radius:var(--r)}
+.steps li::before{content:"0" counter(st);position:absolute;left:18px;top:18px;font-family:var(--font-d);font-weight:700;font-size:1.9rem;line-height:1;color:var(--ink);padding-bottom:6px;border-bottom:3px solid var(--yellow)}
+.steps h3{font-size:1.06rem;font-weight:600;margin-bottom:4px}
+.steps p{font-size:.96rem;color:var(--muted)}
+
+/* Galería */
+.note-photo{display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:7px 12px 7px 10px;border-radius:999px;background:var(--bg);border:1px dashed #C4CEDB;color:var(--muted);font-size:.86rem;line-height:1.3}
+.note-photo .ic{width:16px;height:16px}
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:16px 12px}
+.gal figure{margin:0;min-width:0}
+.gal .photo{aspect-ratio:1/1;border-radius:14px}
+.gal .photo__tag{left:8px;bottom:8px;font-size:.68rem;padding:5px 9px}
+.gal figcaption{margin-top:9px;font-family:var(--font-d);font-weight:600;font-size:.95rem;color:var(--ink);line-height:1.25}
+
+/* Sobre nosotros */
+.about{display:grid;gap:26px;align-items:center}
+.about__txt p{font-size:1.04rem;line-height:1.75}
+.about__txt p + p{margin-top:14px}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.facts li{display:inline-flex;align-items:center;gap:7px;padding:8px 13px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:.9rem;font-weight:500;color:var(--ink)}
+.facts .ic{width:16px;height:16px;color:#B98600}
+
+/* Zona */
+.zone{display:grid;gap:22px}
+.chips{display:flex;flex-wrap:wrap;gap:9px}
+.chips li{display:inline-flex;align-items:center;gap:7px;min-height:40px;padding:8px 15px;border-radius:999px;background:var(--bg);border:1px solid var(--line);font-size:.96rem;font-weight:500;color:var(--ink)}
+.chips li.is-base{background:var(--night);border-color:var(--night);color:#fff}
+.chips .ic{width:16px;height:16px;color:var(--yellow)}
+.zone__note{margin-top:16px;font-size:.92rem;color:var(--muted)}
+.ridge{width:100%;height:auto;fill:none;stroke:#C4CEDB;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.ridge .y{stroke:var(--yellow)}
+.ridge .yf{fill:var(--yellow);stroke:none}
+
+/* Contacto */
+.contact{display:grid;gap:16px}
+.info{padding:24px 20px;border-radius:20px;color:var(--on-dark);background:radial-gradient(360px 240px at 100% 0%,rgba(245,183,0,.14),transparent 70%),var(--night)}
+.info__k{font-size:.78rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--on-dark-muted)}
+.info__tel{display:inline-block;margin-top:4px;font-family:var(--font-d);font-weight:700;font-size:clamp(1.9rem,9vw,2.75rem);line-height:1.15;letter-spacing:-.01em;color:#fff;text-decoration:none;white-space:nowrap}
+.info__tel:hover{color:var(--yellow)}
+.info__cta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.info__cta .btn{padding-inline:12px}
+.info__blk{margin-top:22px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12)}
+.hours{width:100%;border-collapse:collapse;margin-top:8px;font-size:.98rem}
+.hours th,.hours td{padding:9px 0;border-bottom:1px solid rgba(255,255,255,.1);text-align:left;font-weight:400;color:#DDE6F1}
+.hours td{text-align:right;font-weight:600;color:#fff;white-space:nowrap}
+.hours tr:last-child th,.hours tr:last-child td{border-bottom:0}
+.hours .closed{color:var(--on-dark-muted);font-weight:500}
+.info__small{margin-top:6px;font-size:.82rem;color:var(--on-dark-muted)}
+.info address{font-style:normal;margin-top:8px;color:#fff;line-height:1.5}
+.info .btn--ghost{margin-top:14px;width:100%}
+.form{padding:24px 20px;background:#fff;border:1px solid var(--line);border-radius:20px}
+.form h3{font-size:1.2rem;font-weight:600}
+.form__note{display:flex;align-items:center;gap:8px;margin:12px 0 16px;padding:10px 12px;border-radius:12px;background:rgba(245,183,0,.16);border:1px dashed #C9A227;color:#4A3900;font-size:.9rem;font-weight:500;line-height:1.35}
+.form fieldset{border:0;margin:0;padding:0;min-width:0;display:grid;gap:6px}
+.form label{font-size:.9rem;font-weight:600;color:var(--ink);margin-top:8px}
+.form input,.form textarea{width:100%;min-height:48px;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);color:var(--muted);font:inherit;resize:none}
+.form input:disabled,.form textarea:disabled{cursor:not-allowed;opacity:1}
+.btn--off{margin-top:14px;width:100%;background:#E3E8EF;color:#566579;cursor:not-allowed;box-shadow:none}
+
+/* Pie */
+.ftr{background:var(--deep);color:var(--on-dark-muted);padding:36px 0 calc(100px + env(safe-area-inset-bottom,0px));font-size:.92rem}
+.ftr__in{display:grid;gap:20px}
+.ftr__biz{margin-top:12px;line-height:1.6}
+.ftr__prop{padding:16px;border-radius:14px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.03);display:grid;gap:6px}
+.ftr__prop strong{color:#fff;font-weight:600}
+.ftr__legal{display:flex;flex-wrap:wrap;gap:0 18px}
+.ftr__legal button{min-height:44px;padding:0;border:0;background:none;color:#C9D5E3;text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(255,255,255,.3);cursor:pointer;font-size:.92rem}
+.ftr__legal button:hover{color:#fff}
+
+/* Barra fija del móvil */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(10,19,32,.96);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-top:1px solid rgba(255,255,255,.1)}
+.bar .btn{padding-inline:10px;box-shadow:none}
+
+/* Diálogo legal */
+.dlg{width:min(440px,calc(100% - 32px));padding:0;border:0;border-radius:18px;background:#fff;color:var(--text);box-shadow:0 30px 80px rgba(0,0,0,.4)}
+.dlg::backdrop{background:rgba(10,19,32,.62)}
+.dlg__in{padding:24px 22px 22px}
+.dlg h2{font-size:1.3rem;font-weight:700;margin-bottom:10px}
+.dlg p{color:var(--muted)}
+.dlg .btn{margin-top:20px;width:100%;background:var(--night);color:#fff}
+.dlg .btn:hover{background:var(--night-3)}
+
+/* Aparición suave */
+.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+.js .reveal.is-in{opacity:1;transform:none}
+
+@media (min-width:380px){
+  .hdr__call span{display:inline}
+}
+@media (min-width:600px){
+  .sec,.ev{padding:72px 0}
+  .svcs{grid-template-columns:1fr 1fr;gap:16px}
+  .points{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr;gap:16px}
+  .gal{grid-template-columns:repeat(3,1fr);gap:22px 16px}
+  .gal .photo{aspect-ratio:4/3}
+  .gal .photo__tag{font-size:.72rem}
+  .cta,.info__cta{display:flex;flex-wrap:wrap}
+  .cta .btn,.info__cta .btn{padding-inline:26px}
+  .ev__cta{display:flex;flex-wrap:wrap}
+  .info,.form{padding:30px}
+  .info .btn--ghost{width:auto}
+}
+@media (min-width:900px){
+  section[id]{scroll-margin-top:84px}
+  .sec,.ev{padding:92px 0}
+  .sec__head{margin-bottom:40px}
+  .hdr__in{min-height:72px}
+  .nav{display:flex;align-items:center;gap:4px;margin-left:auto}
+  .nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;border-radius:10px;color:#D3DDEA;font-size:.94rem;font-weight:500;text-decoration:none}
+  .nav a:hover{color:#fff;background:rgba(255,255,255,.07)}
+  .hdr__call{padding:0 18px}
+  .hero__in{grid-template-columns:1.05fr .95fr;align-items:center;gap:56px;padding:76px 0 88px}
+  .hero__sub{font-size:1.2rem;max-width:40ch;margin-top:20px}
+  .badge{margin-bottom:22px}
+  .cta{margin-top:30px}
+  .svcs{grid-template-columns:repeat(3,1fr)}
+  .svc{grid-template-columns:1fr;padding:24px}
+  .ev__in{grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+  .ev__deco{width:380px;height:380px;right:-70px;top:-70px}
+  .why{grid-template-columns:320px 1fr;gap:20px}
+  .steps{grid-template-columns:repeat(4,1fr)}
+  .steps li{padding:74px 20px 22px}
+  .steps li::before{left:20px;top:22px}
+  .about{grid-template-columns:.9fr 1.1fr;gap:56px}
+  .zone{grid-template-columns:1.2fr .8fr;gap:56px;align-items:center}
+  .contact{grid-template-columns:1.05fr .95fr;gap:20px;align-items:start}
+  .ftr{padding-bottom:40px}
+  .ftr__in{grid-template-columns:1.2fr 1fr;gap:40px;align-items:start}
+  .bar{display:none}
+}
+@media (prefers-reduced-motion:no-preference){
+  html{scroll-behavior:smooth}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;transition-delay:0s !important}
+  .js .reveal{opacity:1;transform:none}
+  .btn:active{transform:none}
+}
+</style>
+</head>
+<body id="inicio">
+
+<!-- Iconos (SVG en línea, sin archivos externos) -->
+<svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M13.6 2.5 5 13.6h5.6L9.4 21.5 19 10.2h-5.9z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="m12 3.4 2.65 5.37 5.93.86-4.29 4.18 1.01 5.9L12 16.92 6.7 19.71l1.01-5.9-4.29-4.18 5.93-.86z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 3.8h2.6l1.3 3.6-1.7 1.3a11 11 0 0 0 6.5 6.5l1.3-1.7 3.6 1.3v2.6a1.8 1.8 0 0 1-1.9 1.8A15.6 15.6 0 0 1 4.8 5.7a1.8 1.8 0 0 1 1.8-1.9Z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 3.5a8.5 8.5 0 0 0-7.3 12.8L3.5 20.5l4.3-1.1A8.5 8.5 0 1 0 12 3.5Z"/><path d="M9.3 8.3c-.6 2.7 3 6.4 6 6.4.6 0 1.2-.5 1.4-1.1l-1.7-1-.9.8c-1-.4-2.1-1.5-2.6-2.6l.8-.9-1-1.7c-.8 0-1.6.1-2 .1Z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-10.5a6.5 6.5 0 0 1 13 0C18.5 15.4 12 21 12 21Z"/><circle cx="12" cy="10.5" r="2.3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8.5A1.5 1.5 0 0 1 5.5 7h2l1.2-2h6.6l1.2 2h2A1.5 1.5 0 0 1 20 8.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 17.5Z"/><circle cx="12" cy="13" r="3.2"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9.5h13V10"/><path d="M12.8 11.2 10.4 15h3.2l-2.4 3.8"/></symbol>
+  <symbol id="i-socket" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="3.5"/><circle cx="12" cy="12" r="5"/><path d="M10 12h.01M14 12h.01"/></symbol>
+  <symbol id="i-charger" viewBox="0 0 24 24"><rect x="4.5" y="3.5" width="9.5" height="17" rx="1.8"/><path d="M10 7.8 8 11.6h2.6L8.8 15.4"/><path d="M14 9h1.8a1.7 1.7 0 0 1 1.7 1.7V16a1.5 1.5 0 0 0 3 0v-5.2L18.6 8"/></symbol>
+  <symbol id="i-shop" viewBox="0 0 24 24"><path d="M4 9.5 5.5 4.5h13l1.5 5"/><path d="M4 9.5a2.67 2.67 0 0 0 5.33 0 2.67 2.67 0 0 0 5.34 0 2.67 2.67 0 0 0 5.33 0"/><path d="M5.5 12.2v7.3h13v-7.3"/><path d="M10 19.5V15h4v4.5"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M8.7 14.5a6 6 0 1 1 6.6 0c-.5.4-.8 1-.8 1.6v.9h-5v-.9c0-.6-.3-1.2-.8-1.6Z"/><path d="M10 20.2h4"/></symbol>
+  <symbol id="i-pulse" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M6.5 12h2.8l1.5-3.5 2.4 7 1.5-3.5h2.8"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4.5 6.5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H11l-4 3.5v-3.5h-.5a2 2 0 0 1-2-2Z"/><path d="M8.5 9h7M8.5 12h4.5"/></symbol>
+  <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M9.8 9.6a2.3 2.3 0 1 1 3.3 2.1c-.7.4-1.1.9-1.1 1.8"/><path d="M12 16.5h.01"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="m8 12.3 2.8 2.8L16.2 9"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3.5h7l4 4v11.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 6 19V5a1.5 1.5 0 0 1 1-1.5Z"/><path d="M14 3.5V8h4M9 12.5h6M9 16h4"/></symbol>
+</svg>
+
+<div class="preview dark">Web de muestra · Voltio es un negocio ficticio</div>
+
+<header class="hdr dark">
+  <div class="wrap hdr__in">
+    <a class="logo" href="#inicio" aria-label="Voltio, ir al inicio">
+      <span class="logo__mark"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-bolt"/></svg></span>
+      <span class="logo__txt"><b>Voltio</b><i>Electricistas</i></span>
+    </a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#servicios">Servicios</a>
+      <a href="#cargadores">Cargadores</a>
+      <a href="#como">Cómo trabajamos</a>
+      <a href="#zona">Zona</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="hdr__call" href="tel:+34600000000" aria-label="Llamar al 600 000 000">
+      <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span>600 000 000</span>
+    </a>
+  </div>
+</header>
+
+<main>
+
+  <!-- PORTADA -->
+  <section class="hero dark" aria-labelledby="hero-t">
+    <svg class="hero__circuit" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+      <g fill="none" stroke="#FFFFFF" stroke-opacity=".075" stroke-width="1.2">
+        <path d="M-10 70h170l40 40h110"/>
+        <path d="M810 50H650l-50 50H480"/>
+        <path d="M250 -10v60l50 50"/>
+        <path d="M560 -10v70l-40 40"/>
+        <path d="M-10 430h110l50-50h120"/>
+        <path d="M810 400H700l-40 40H550l-40 40"/>
+        <path d="M330 610v-70l40-40h90"/>
+        <path d="M810 540H680l-30-30"/>
+        <path d="M-10 250h60l30 30"/>
+        <path d="M810 230h-70l-30 30h-50"/>
+      </g>
+      <g fill="#0F1B2D" stroke="#FFFFFF" stroke-opacity=".16" stroke-width="1.2">
+        <circle cx="310" cy="110" r="4"/><circle cx="300" cy="100" r="0"/><circle cx="520" cy="100" r="4"/>
+        <circle cx="270" cy="380" r="4"/><circle cx="510" cy="480" r="4"/><circle cx="650" cy="510" r="4"/>
+        <circle cx="80" cy="280" r="4"/><circle cx="660" cy="260" r="4"/>
+      </g>
+      <g fill="#F5B700" fill-opacity=".55">
+        <circle cx="480" cy="100" r="3"/><circle cx="460" cy="500" r="3"/><circle cx="300" cy="100" r="3"/>
+      </g>
+    </svg>
+
+    <div class="wrap hero__in">
+      <div class="hero__txt">
+        <p class="badge" aria-label="Nota en Google: 4,9 sobre 5, con 128 opiniones">
+          <b aria-hidden="true">4,9</b>
+          <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-star"/></svg>
+          <span aria-hidden="true">· 128 opiniones en Google</span>
+        </p>
+        <h1 id="hero-t">Electricistas en Las Rozas y la <em>Sierra de Guadarrama</em></h1>
+        <p class="hero__sub">Instalaciones, reformas eléctricas y cargadores para coche eléctrico. Puntuales y claros desde el primer día.</p>
+        <div class="cta">
+          <a class="btn btn--call" href="tel:+34600000000">
+            <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>Llamar
+          </a>
+          <a class="btn btn--wa" href="https://wa.me/34600000000?text=Hola%2C%20quer%C3%ADa%20pediros%20presupuesto%20para%E2%80%A6" target="_blank" rel="noopener">
+            <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg>WhatsApp
+          </a>
+        </div>
+        <p class="hero__meta">
+          <a href="tel:+34600000000">600 000 000</a>
+          <span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-clock"/></svg>Lunes a viernes, de 8:00 a 20:00</span>
+        </p>
+      </div>
+
+      <div class="photo photo--hero reveal">
+        <svg class="art" viewBox="0 0 400 280" role="img" aria-label="Ilustración: una casa de la Sierra con un cargador de pared y un coche eléctrico enchufado">
+          <path class="soft" d="M0 150l52-50 30 26 50-64 46 54 38-32 54 50 42-36 48 46 40-30"/>
+          <path class="soft" d="M121 76l11 10 9-8M206 93l10 8 9-7"/>
+          <path d="M16 244h368"/>
+          <path d="M48 176l74-55 74 55"/>
+          <path d="M62 166v78M182 166v78"/>
+          <path d="M152 143v-15h14v25"/>
+          <path d="M108 244v-42h28v42"/>
+          <rect x="74" y="184" width="22" height="22" rx="2"/>
+          <rect class="yw" x="148" y="184" width="22" height="22" rx="2"/>
+          <path class="y" d="M159 184v22M148 195h22"/>
+          <rect x="208" y="180" width="26" height="44" rx="6"/>
+          <path d="M221 224v20"/>
+          <path class="y" d="M223 189l-6 11h8l-6 11"/>
+          <path class="y" d="M234 208c18 0 10 20 30 18"/>
+          <circle class="yf" cx="264" cy="226" r="3"/>
+          <path d="M264 234v-9a8 8 0 0 1 8-8h9l15-21a8 8 0 0 1 6.5-3.4H338a8 8 0 0 1 6.8 3.8L357 217h14a9 9 0 0 1 9 9v8"/>
+          <path d="M264 234h12M296 234h42M358 234h22M281 217h76M318 193v24"/>
+          <circle cx="286" cy="234" r="10"/><circle cx="286" cy="234" r="3.5"/>
+          <circle cx="348" cy="234" r="10"/><circle cx="348" cy="234" r="3.5"/>
+        </svg>
+        <span class="photo__tag"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-camera"/></svg>Aquí irán vuestras fotos</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="sec" id="servicios" aria-labelledby="serv-t">
+    <div class="wrap">
+      <div class="sec__head">
+        <p class="eyebrow">Servicios</p>
+        <h2 id="serv-t">Qué hacemos</h2>
+        <p class="lead">Electricidad para tu casa, tu local y tu coche. Si no ves lo que buscas, pregúntanos.</p>
+      </div>
+      <ul class="svcs">
+        <li class="svc reveal">
+          <span class="svc__ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-home"/></svg></span>
+          <div>
+            <h3>Instalaciones eléctricas en viviendas</h3>
+            <p>Obra nueva, ampliaciones y cambio de instalaciones antiguas.</p>
+          </div>
+        </li>
+        <li class="svc reveal">
+          <span class="svc__ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-socket"/></svg></span>
+          <div>
+            <h3>Reformas eléctricas</h3>
+            <p>Cocinas, baños y reformas integrales. Vemos contigo dónde van los enchufes y los puntos de luz.</p>
+          </div>
+        </li>
+        <li class="svc svc--ev reveal">
+          <span class="svc__ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-charger"/></svg></span>
+          <div>
+            <h3>Cargadores para coche eléctrico</h3>
+            <p>En garaje privado y en comunidades de vecinos.</p>
+            <a class="more" href="#cargadores">Ver cómo lo hacemos <span aria-hidden="true">→</span></a>
+          </div>
+        </li>
+        <li class="svc reveal">
+          <span class="svc__ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-shop"/></svg></span>
+          <div>
+            <h3>Locales y negocios</h3>
+            <p>Instalaciones y adecuación de locales.</p>
+          </div>
+        </li>
+        <li class="svc reveal">
+          <span class="svc__ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-bulb"/></svg></span>
+          <div>
+            <h3>Iluminación</h3>
+            <p>Interior, exterior y jardín, con LED.</p>
+          </div>
+        </li>
+        <li class="svc reveal">
+          <span class="svc__ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-pulse"/></svg></span>
+          <div>
+            <h3>Averías y revisiones</h3>
+            <p>Diagnóstico y reparación, con urgencias el mismo día.</p>
+          </div>
+        </li>
+      </ul>
+      <p class="svc-extra reveal">
+        <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-doc"/></svg>
+        <span>Boletines y certificados eléctricos</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- BANDA DEL CARGADOR -->
+  <section class="ev dark" id="cargadores" aria-labelledby="ev-t">
+    <svg class="ev__deco" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+      <path d="M28 40a44 44 0 1 0 64 0Z"/>
+      <circle cx="46" cy="56" r="6"/><circle cx="74" cy="56" r="6"/>
+      <circle cx="38" cy="78" r="7"/><circle cx="60" cy="78" r="7"/><circle cx="82" cy="78" r="7"/>
+      <circle cx="48" cy="99" r="6"/><circle cx="72" cy="99" r="6"/>
+    </svg>
+    <div class="wrap ev__in">
+      <div>
+        <p class="eyebrow">Cargadores para coche eléctrico</p>
+        <h2 id="ev-t">¿Coche eléctrico? <em>Te ponemos el cargador</em></h2>
+        <p class="ev__lead">Te aconsejamos la potencia y el punto de carga que necesitas.</p>
+        <div class="ev__cta">
+          <a class="btn btn--wa" href="https://wa.me/34600000000?text=Hola%2C%20quer%C3%ADa%20un%20presupuesto%20para%20instalar%20un%20cargador%20de%20coche%20el%C3%A9ctrico" target="_blank" rel="noopener">
+            <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg>Presupuesto por WhatsApp
+          </a>
+          <a class="btn btn--ghost" href="tel:+34600000000">
+            <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>Llamar
+          </a>
+        </div>
+      </div>
+      <ol class="steps-ev">
+        <li class="reveal">
+          <h3>Visita y estudio de tu instalación</h3>
+          <p>Vemos tu garaje y tu cuadro eléctrico.</p>
+        </li>
+        <li class="reveal">
+          <h3>Presupuesto cerrado</h3>
+          <p>Sabes lo que cuesta antes de empezar.</p>
+        </li>
+        <li class="reveal">
+          <h3>Instalación y prueba</h3>
+          <p>Lo dejamos puesto y comprobamos que carga.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- POR QUÉ NOSOTROS -->
+  <section class="sec sec--white" id="por-que" aria-labelledby="why-t">
+    <div class="wrap">
+      <div class="sec__head">
+        <p class="eyebrow">Por qué nosotros</p>
+        <h2 id="why-t">Lo que destacan nuestros clientes</h2>
+      </div>
+      <div class="why">
+        <div class="rating dark reveal" role="group" aria-label="Nota en Google: 4,9 sobre 5, con 128 opiniones">
+          <span class="rating__n" aria-hidden="true">4,9</span>
+          <span class="rating__stars" aria-hidden="true">
+            <svg class="ic" focusable="false"><use href="#i-star"/></svg>
+            <svg class="ic" focusable="false"><use href="#i-star"/></svg>
+            <svg class="ic" focusable="false"><use href="#i-star"/></svg>
+            <svg class="ic" focusable="false"><use href="#i-star"/></svg>
+            <svg class="ic" focusable="false"><use href="#i-star"/></svg>
+          </span>
+          <span class="rating__t" aria-hidden="true">128 opiniones en Google</span>
+          <span class="rating__s" aria-hidden="true">Nota media de nuestra ficha</span>
+        </div>
+        <ul class="points">
+          <li class="point reveal">
+            <span class="point__ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-clock"/></svg></span>
+            <div><h3>Puntuales</h3><p>Llegamos a la hora acordada.</p></div>
+          </li>
+          <li class="point reveal">
+            <span class="point__ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg></span>
+            <div><h3>Te lo explicamos antes de empezar</h3><p>Sabes qué vamos a hacer y por qué.</p></div>
+          </li>
+          <li class="point reveal">
+            <span class="point__ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-help"/></svg></span>
+            <div><h3>Asesoramiento técnico</h3><p>Resolvemos tus dudas y te recomendamos lo que de verdad necesitas.</p></div>
+          </li>
+          <li class="point reveal">
+            <span class="point__ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-check"/></svg></span>
+            <div><h3>Buena relación calidad-precio</h3><p>Y trabajos entregados a tiempo.</p></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO TRABAJAMOS -->
+  <section class="sec" id="como" aria-labelledby="como-t">
+    <div class="wrap">
+      <div class="sec__head">
+        <p class="eyebrow">Cómo trabajamos</p>
+        <h2 id="como-t">Cuatro pasos, sin líos</h2>
+      </div>
+      <ol class="steps">
+        <li class="reveal">
+          <h3>Nos cuentas qué necesitas</h3>
+          <p>Por teléfono o por WhatsApp.</p>
+        </li>
+        <li class="reveal">
+          <h3>Vamos a verlo</h3>
+          <p>Miramos la instalación y resolvemos tus dudas.</p>
+        </li>
+        <li class="reveal">
+          <h3>Presupuesto claro y sin sorpresas</h3>
+          <p>Te lo explicamos punto por punto.</p>
+        </li>
+        <li class="reveal">
+          <h3>Trabajo hecho, probado y explicado</h3>
+          <p>Lo dejamos funcionando y te contamos qué hemos hecho.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section class="sec sec--white" id="galeria" aria-labelledby="gal-t">
+    <div class="wrap">
+      <div class="sec__head">
+        <p class="eyebrow">Trabajos</p>
+        <h2 id="gal-t">Nuestros trabajos</h2>
+        <p class="note-photo"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-camera"/></svg>Aquí irán vuestras fotos de trabajos terminados</p>
+      </div>
+      <div class="gal">
+        <figure class="reveal">
+          <div class="photo">
+            <svg class="art" viewBox="0 0 160 120" role="img" aria-label="Ilustración de un cuadro eléctrico">
+              <rect x="44" y="12" width="72" height="88" rx="7"/>
+              <rect class="soft" x="52" y="22" width="56" height="28" rx="3"/>
+              <rect class="soft" x="52" y="58" width="56" height="28" rx="3"/>
+              <path d="M57 29h6v14h-6zM66 29h6v14h-6zM75 29h6v14h-6zM84 29h6v14h-6zM93 29h6v14h-6zM57 65h6v14h-6zM66 65h6v14h-6zM75 65h6v14h-6zM84 65h6v14h-6zM93 65h6v14h-6z"/>
+              <path class="y" d="M60 32v4M69 32v4M78 36v4M87 32v4M96 32v4M60 68v4M69 68v4M78 68v4M87 68v4M96 72v4"/>
+              <path class="soft" d="M64 100v12M80 100v12M96 100v12"/>
+            </svg>
+            <span class="photo__tag">Vuestra foto aquí</span>
+          </div>
+          <figcaption>Cuadro eléctrico</figcaption>
+        </figure>
+        <figure class="reveal">
+          <div class="photo photo--warm">
+            <svg class="art" viewBox="0 0 160 120" role="img" aria-label="Ilustración de un cargador de pared para coche eléctrico">
+              <rect x="50" y="12" width="48" height="66" rx="11"/>
+              <circle cx="74" cy="38" r="13"/>
+              <path class="y" d="M76.5 29l-7 10.5H78l-6 10"/>
+              <path d="M64 64h20"/>
+              <path d="M74 78v6c0 16 38 14 38-6V62"/>
+              <rect x="105" y="46" width="14" height="16" rx="4"/>
+              <path d="M109 46v-5M115 46v-5"/>
+              <path class="soft" d="M30 106h100"/>
+            </svg>
+            <span class="photo__tag">Vuestra foto aquí</span>
+          </div>
+          <figcaption>Cargador de coche eléctrico</figcaption>
+        </figure>
+        <figure class="reveal">
+          <div class="photo photo--light">
+            <svg class="art" viewBox="0 0 160 120" role="img" aria-label="Ilustración de una cocina reformada con sus enchufes">
+              <rect x="20" y="16" width="30" height="26" rx="2"/>
+              <path class="y" d="M24 47h22"/>
+              <path d="M64 14h32v16l10 12H54l10-12z"/>
+              <path d="M70 76v-9h20v9M66 69h4M90 69h4"/>
+              <rect x="18" y="78" width="124" height="6" rx="1.5"/>
+              <path d="M24 84v24M62 84v24M100 84v24M136 84v24"/>
+              <path class="soft" d="M38 93h10M76 93h10M113 93h10"/>
+              <rect class="y" x="114" y="52" width="24" height="14" rx="3"/>
+              <circle class="yf" cx="122" cy="59" r="1.6"/><circle class="yf" cx="130" cy="59" r="1.6"/>
+            </svg>
+            <span class="photo__tag">Vuestra foto aquí</span>
+          </div>
+          <figcaption>Reforma de cocina</figcaption>
+        </figure>
+        <figure class="reveal">
+          <div class="photo">
+            <svg class="art" viewBox="0 0 160 120" role="img" aria-label="Ilustración de una farola de jardín encendida">
+              <path class="yf" opacity=".16" d="M70 50 44 104h72L90 50z"/>
+              <path d="M22 104h116"/>
+              <path d="M80 104V50"/>
+              <path d="M70 50h20l-3-16H73z"/>
+              <path d="M69 34h22M80 34v-7"/>
+              <path class="y" d="M60 56l-9 4M100 56l9 4M64 68l-7 6M96 68l7 6"/>
+              <path d="M122 104V84M122 104c0-11 8-14 8-25M122 104c0-9-8-12-8-21"/>
+              <path class="soft" d="M34 104c0-8 5-10 5-17M34 104c0-6-5-8-5-13"/>
+            </svg>
+            <span class="photo__tag">Vuestra foto aquí</span>
+          </div>
+          <figcaption>Iluminación exterior</figcaption>
+        </figure>
+        <figure class="reveal">
+          <div class="photo photo--light">
+            <svg class="art" viewBox="0 0 160 120" role="img" aria-label="Ilustración de la fachada de un local comercial">
+              <path d="M36 44l7-20h74l7 20z"/>
+              <path class="soft" d="M59 24l-4 20M80 24v20M101 24l4 20"/>
+              <path d="M42 44v60h76V44"/>
+              <path d="M28 104h104"/>
+              <rect x="70" y="66" width="20" height="38" rx="1.5"/>
+              <path d="M86 86h.01"/>
+              <rect x="48" y="62" width="15" height="24" rx="1.5"/>
+              <rect x="97" y="62" width="15" height="24" rx="1.5"/>
+              <circle class="yf" cx="55.5" cy="52" r="2.2"/><circle class="yf" cx="80" cy="52" r="2.2"/><circle class="yf" cx="104.5" cy="52" r="2.2"/>
+            </svg>
+            <span class="photo__tag">Vuestra foto aquí</span>
+          </div>
+          <figcaption>Local comercial</figcaption>
+        </figure>
+        <figure class="reveal">
+          <div class="photo">
+            <svg class="art" viewBox="0 0 160 120" role="img" aria-label="Ilustración de tres personas del equipo">
+              <circle class="soft" cx="46" cy="56" r="9"/>
+              <path class="soft" d="M28 102v-10a18 18 0 0 1 26-16"/>
+              <circle class="soft" cx="114" cy="56" r="9"/>
+              <path class="soft" d="M132 102v-10a18 18 0 0 0-26-16"/>
+              <circle cx="80" cy="46" r="11"/>
+              <path d="M58 102V90a22 22 0 0 1 44 0v12"/>
+              <path class="y" d="M68 42a12 12 0 0 1 24 0M65 42h30"/>
+            </svg>
+            <span class="photo__tag">Vuestra foto aquí</span>
+          </div>
+          <figcaption>El equipo</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE NOSOTROS -->
+  <section class="sec" id="nosotros" aria-labelledby="about-t">
+    <div class="wrap about">
+      <div class="photo reveal">
+        <svg class="art" viewBox="0 0 160 120" role="img" aria-label="Ilustración de tres personas del equipo de Voltio">
+          <circle class="soft" cx="46" cy="56" r="9"/>
+          <path class="soft" d="M28 102v-10a18 18 0 0 1 26-16"/>
+          <circle class="soft" cx="114" cy="56" r="9"/>
+          <path class="soft" d="M132 102v-10a18 18 0 0 0-26-16"/>
+          <circle cx="80" cy="46" r="11"/>
+          <path d="M58 102V90a22 22 0 0 1 44 0v12"/>
+          <path class="y" d="M68 42a12 12 0 0 1 24 0M65 42h30"/>
+          <path class="y" d="M82 14l-5 8h6l-5 8"/>
+        </svg>
+        <span class="photo__tag"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-camera"/></svg>Aquí irá la foto del equipo</span>
+      </div>
+      <div class="about__txt">
+        <p class="eyebrow">Sobre nosotros</p>
+        <h2 id="about-t">Somos de Las Rozas</h2>
+        <p class="lead" style="color:var(--text)">Somos Voltio, una empresa de electricistas de Las Rozas. Empezamos en 2012 y más de 120 vecinos nos han valorado en Google.</p>
+        <p>Somos Dani y Javi, electricistas de toda la vida, y un equipo de cuatro personas que trabaja como si fuera su propia casa.</p>
+        <ul class="facts" aria-label="En pocas palabras">
+          <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-bolt"/></svg>Desde 2012</li>
+          <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg>Las Rozas</li>
+          <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-star"/></svg>4,9 en Google</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZONA DE TRABAJO -->
+  <section class="sec sec--white" id="zona" aria-labelledby="zona-t">
+    <div class="wrap zone">
+      <div>
+        <p class="eyebrow">Zona de trabajo</p>
+        <h2 id="zona-t">Dónde trabajamos</h2>
+        <p class="lead" style="margin-bottom:22px">Las Rozas y los pueblos de alrededor, en la Sierra de Guadarrama.</p>
+        <ul class="chips">
+          <li class="is-base"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg>Las Rozas</li>
+          <li>Majadahonda</li>
+          <li>Torrelodones</li>
+          <li>Pozuelo</li>
+          <li>Galapagar</li>
+          <li>Boadilla del Monte</li>
+          <li>Villanueva del Pardillo</li>
+          <li>Collado Villalba</li>
+          <li>El Escorial</li>
+        </ul>
+        <p class="zone__note">¿Estás un poco más lejos? Pregúntanos.</p>
+      </div>
+      <svg class="ridge reveal" viewBox="0 0 360 150" role="img" aria-label="Ilustración del perfil de la Sierra de Guadarrama">
+        <path d="M4 124l50-52 26 24 46-66 44 56 34-30 52 54 38-34 62 48"/>
+        <path d="M116 44l10 9 9-8M201 86l9 7 8-6"/>
+        <path d="M4 138h352"/>
+        <path class="y" d="M40 138c30-10 60-10 90 0s70 10 100 0 60-10 90 0" stroke-dasharray="2 6"/>
+        <circle class="yf" cx="130" cy="138" r="5"/>
+        <circle cx="130" cy="138" r="10" class="y"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="sec" id="contacto" aria-labelledby="cont-t">
+    <div class="wrap">
+      <div class="sec__head">
+        <p class="eyebrow">Contacto</p>
+        <h2 id="cont-t">Cuéntanos qué necesitas</h2>
+        <p class="lead">Llámanos o escríbenos por WhatsApp.</p>
+      </div>
+      <div class="contact">
+        <div class="info dark reveal">
+          <p class="info__k">Teléfono</p>
+          <a class="info__tel" href="tel:+34600000000">600 000 000</a>
+          <div class="info__cta">
+            <a class="btn btn--call" href="tel:+34600000000">
+              <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>Llamar
+            </a>
+            <a class="btn btn--wa" href="https://wa.me/34600000000?text=Hola%2C%20quer%C3%ADa%20pediros%20presupuesto%20para%E2%80%A6" target="_blank" rel="noopener">
+              <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg>WhatsApp
+            </a>
+          </div>
+
+          <div class="info__blk">
+            <p class="info__k" id="horario-t">Horario</p>
+            <table class="hours" aria-labelledby="horario-t">
+              <tbody>
+                <tr><th scope="row">Lunes a viernes</th><td>8:00–20:00</td></tr>
+                <tr><th scope="row">Sábado y domingo</th><td class="closed">Cerrado</td></tr>
+              </tbody>
+            </table>
+            <p class="info__small">Horario de la ficha de Google, pendiente de confirmar.</p>
+          </div>
+
+          <div class="info__blk">
+            <p class="info__k">Dirección</p>
+            <address>Calle de Ejemplo, 18<br>28231 Las Rozas (Madrid)</address>
+            <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Las+Rozas+de+Madrid" target="_blank" rel="noopener">
+              <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg>Cómo llegar
+            </a>
+          </div>
+        </div>
+
+        <form class="form reveal" id="form-demo" novalidate aria-labelledby="form-t" aria-describedby="form-note">
+          <h3 id="form-t">Escríbenos</h3>
+          <p class="form__note" id="form-note">Formulario de muestra: se activa al publicar</p>
+          <fieldset disabled>
+            <legend class="sr">Formulario de contacto desactivado</legend>
+            <label for="f-nombre">Nombre</label>
+            <input id="f-nombre" type="text" placeholder="Tu nombre" autocomplete="off" disabled>
+            <label for="f-tel">Teléfono</label>
+            <input id="f-tel" type="tel" placeholder="Tu teléfono" autocomplete="off" disabled>
+            <label for="f-msg">Mensaje</label>
+            <textarea id="f-msg" rows="4" placeholder="Cuéntanos qué necesitas" disabled></textarea>
+            <button class="btn btn--off" type="button" disabled>Enviar</button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ftr dark">
+  <div class="wrap ftr__in">
+    <div>
+      <a class="logo" href="#inicio" aria-label="Voltio, ir al inicio">
+        <span class="logo__mark"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-bolt"/></svg></span>
+        <span class="logo__txt"><b>Voltio</b><i>Electricistas</i></span>
+      </a>
+      <p class="ftr__biz">Voltio Electricistas<br>Calle de Ejemplo, 18 · 28231 Las Rozas (Madrid)</p>
+      <div class="ftr__legal">
+        <button type="button" data-legal="Aviso legal">Aviso legal</button>
+        <button type="button" data-legal="Privacidad">Privacidad</button>
+        <button type="button" data-legal="Cookies">Cookies</button>
+      </div>
+    </div>
+    <div class="ftr__prop">
+      <p><strong>Web de muestra · Voltio es un negocio ficticio.</strong></p>
+      <p>Diseño y web: Gokazas · 698 592 047</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Barra fija del móvil -->
+<nav class="bar dark" aria-label="Contacto rápido">
+  <a class="btn btn--call" href="tel:+34600000000">
+    <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>Llamar
+  </a>
+  <a class="btn btn--wa" href="https://wa.me/34600000000?text=Hola%2C%20quer%C3%ADa%20pediros%20presupuesto%20para%E2%80%A6" target="_blank" rel="noopener">
+    <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg>WhatsApp
+  </a>
+</nav>
+
+<!-- Diálogo de textos legales -->
+<dialog class="dlg" id="legal" aria-labelledby="legal-title">
+  <div class="dlg__in">
+    <h2 id="legal-title">Aviso legal</h2>
+    <p>Textos legales de plantilla: se completan con los datos del negocio antes de publicar.</p>
+    <button class="btn" type="button" id="legal-close">Cerrar</button>
+  </div>
+</dialog>
+
+<script>
+(function () {
+  var d = document, root = d.documentElement;
+  try {
+    /* Aparición suave al hacer scroll (se omite con «reducir movimiento») */
+    var els = Array.prototype.slice.call(d.querySelectorAll('.reveal'));
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var showAll = function () { els.forEach(function (el) { el.classList.add('is-in'); }); };
+    if (reduce || !('IntersectionObserver' in window)) {
+      showAll();
+    } else {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+        });
+      }, { rootMargin: '0px 0px -5% 0px', threshold: 0.05 });
+      els.forEach(function (el) { io.observe(el); });
+      window.addEventListener('beforeprint', showAll);
+    }
+
+    /* Diálogo de textos legales */
+    var dlg = d.getElementById('legal'), ttl = d.getElementById('legal-title');
+    var closeDlg = function () { if (dlg.close) { dlg.close(); } else { dlg.removeAttribute('open'); } };
+    Array.prototype.forEach.call(d.querySelectorAll('[data-legal]'), function (b) {
+      b.addEventListener('click', function () {
+        ttl.textContent = b.getAttribute('data-legal');
+        if (dlg.showModal) { dlg.showModal(); } else { dlg.setAttribute('open', ''); }
+      });
+    });
+    d.getElementById('legal-close').addEventListener('click', closeDlg);
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) { closeDlg(); } });
+
+    /* Formulario de muestra: no envía nada */
+    d.getElementById('form-demo').addEventListener('submit', function (e) { e.preventDefault(); });
+  } catch (err) {
+    root.className = root.className.replace(/\bjs\b/, '');
+  }
+})();
+</script>
+<div id="demoNote" role="status" aria-live="polite" style="position:fixed;left:50%;bottom:92px;transform:translate(-50%,16px);opacity:0;pointer-events:none;z-index:999;max-width:min(420px,calc(100% - 32px));background:#0F1B2D;color:#EAF0F7;border:2px solid #F5B700;padding:14px 18px;border-radius:14px;font:500 .92rem/1.4 Inter,system-ui,sans-serif;transition:all .3s"></div>
+<script>(function(){var n=document.getElementById('demoNote'),t;document.addEventListener('click',function(e){var a=e.target.closest('a[href^="tel:"],a[href*="wa.me"],a[href*="google.com/maps"]');if(!a)return;e.preventDefault();var h=a.getAttribute('href');n.innerHTML=/^tel:/.test(h)?'<b>Llamaría a tu teléfono</b><br>En tu web, un toque y te llaman directamente.':(/wa\.me/.test(h)?'<b>Abriría tu WhatsApp</b><br>Con el mensaje ya escrito para pedir presupuesto.':'<b>Abriría Google Maps</b><br>Con la ruta hasta tu negocio.');n.style.opacity=1;n.style.transform='translate(-50%,0)';clearTimeout(t);t=setTimeout(function(){n.style.opacity=0;n.style.transform='translate(-50%,16px)'},3200)},true)})();</script>
+</body>
+</html>

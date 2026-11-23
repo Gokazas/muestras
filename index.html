@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Gokazas · Webs de muestra</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;600;700&family=Syne:wght@800&family=Unbounded:wght@800&family=Archivo:wdth,wght@125,900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#111214;--card:#1A1C1F;--line:#2A2D31;--text:#E8E6E1;--muted:#9A9DA2;--accent:#F2C38B}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1rem/1.6 "Manrope",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{width:min(1160px,calc(100% - 32px));margin-inline:auto}
+header{padding:64px 0 40px}
+.brand{font:600 .8rem/1 "Manrope";letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+h1{font:400 clamp(2.8rem,8vw,6rem)/.95 "Instrument Serif",Georgia,serif;letter-spacing:-.02em;margin:18px 0 20px}
+h1 em{color:var(--accent)}
+header p{color:var(--muted);max-width:560px;font-size:1.08rem}
+.offer{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.offer span{border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:.88rem}
+.offer b{color:var(--accent)}
+.grid{display:grid;gap:18px;padding-bottom:80px}
+@media (min-width:800px){.grid{grid-template-columns:1fr 1fr}}
+@media (min-width:1100px){.grid{grid-template-columns:repeat(6,1fr)}.grid .card{grid-column:span 2}.grid .card:nth-child(n+4){grid-column:span 3}}
+a.card{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:transform .3s cubic-bezier(.2,.8,.2,1),border-color .3s}
+a.card:hover{transform:translateY(-4px);border-color:#44484E}
+a.card:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.sw{height:180px;position:relative;display:flex;align-items:flex-end;padding:20px}
+.sw b{font:400 2.6rem/1 "Instrument Serif",Georgia,serif}
+.sw small{position:absolute;top:16px;right:16px;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;background:rgba(0,0,0,.35);color:#fff;padding:5px 10px;border-radius:999px}
+.body{padding:20px 22px 24px}
+.body h2{margin:0 0 6px;font-size:1.05rem}
+.body p{margin:0 0 14px;color:var(--muted);font-size:.93rem}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-size:.76rem;border:1px solid var(--line);border-radius:999px;padding:3px 10px;color:#C9CBCF}
+footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <p class="brand">Gokazas · Webs para negocios de barrio</p>
+  <h1>Cinco estilos.<br><em>Tu web, en 7 días.</em></h1>
+  <p>Estas webs son de muestra, con negocios inventados. Sirven para que veas cómo trabajamos. La tuya llevará tus fotos, tus textos y tu teléfono.</p>
+  <p style="margin-top:22px"><a href="presentar.html" style="display:inline-flex;gap:10px;align-items:center;background:#F2C38B;color:#111214;text-decoration:none;font-weight:700;padding:14px 20px">▶ Modo presentación: móvil y ordenador</a></p>
+  <div class="offer"><span><b>7 días</b> desde las fotos hasta la web publicada</span><span>Pensadas primero para el <b>móvil</b></span><span>Botones directos a <b>llamar y WhatsApp</b></span></div>
+</header>
+<main class="wrap grid">
+  <a class="card" href="ventanal-cristaleria/index.html">
+    <div class="sw" style="background:linear-gradient(90deg,#F6D6C4,#B5DAEE 30%,#F4D9A6 50%,#C97590 70%,#2B2C52 86%,#0D1020);color:#14171A;border:8px solid #1E2124"><small style="background:#1E2124">Horizontal</small><b style="font-family:Unbounded,'Arial Black',Arial;font-weight:800;font-size:2rem;letter-spacing:-.02em">VENTANAL</b></div>
+    <div class="body"><h2>Cristalería, cerramientos, reformas</h2><p>Marco de aluminio y cielo que cambia del amanecer a la noche. Cortina de cristal que se abre, espejo empañado que se limpia con el dedo y proyectos con filtros.</p><div class="tags"><span>Cortina que se abre</span><span>Espejo antivaho</span><span>Proyectos con filtros</span></div></div>
+  </a>
+  <a class="card" href="marea-baja-taberna/index.html">
+    <div class="sw" style="background:#0F2D4A;color:#F5ECDC;background-image:radial-gradient(circle at 70% 34%,#E4572E 0 34px,transparent 35px),linear-gradient(transparent 70%,#2E7D7A 70% 80%,#E4572E 80% 88%,#F5ECDC 88%)"><small>Atrevido</small><b>Marea Baja</b></div>
+    <div class="body"><h2>Bar, taberna o restaurante</h2><p>Colores fuertes y mucho carácter. Pizarra del día, carta con filtros de alérgenos y reservas que llegan escritas por WhatsApp.</p><div class="tags"><span>Carta digital</span><span>Reserva por WhatsApp</span><span>Abierto ahora</span></div></div>
+  </a>
+  <a class="card" href="nacar-peluqueria/index.html">
+    <div class="sw" style="background:#F2EDE3;color:#0078BF;background-image:radial-gradient(circle,rgba(255,72,176,.55) 2px,transparent 2.4px);background-size:10px 10px"><small style="background:#FF48B0;color:#1C1B1A">Fanzine</small><b style="font-family:Syne,'Arial Black',Arial;font-weight:800;font-size:2.6rem;text-shadow:3px 2px 0 rgba(255,72,176,.8)">Nácar</b></div>
+    <div class="body"><h2>Peluquería, estética, moda, florista</h2><p>Fanzine impreso en risografía: dos tintas, papel rasgado, cinta adhesiva y notas a mano. Galería con hoja de contactos, precios en libreta y cartel con papelitos para arrancar.</p><div class="tags"><span>Hoja de contactos</span><span>Precios en libreta</span><span>Cita en una frase</span></div></div>
+  </a>
+  <a class="card" href="garaje41-taller/index.html">
+    <div class="sw" style="background:#ECECE6;color:#0D0D0D;background-image:linear-gradient(rgba(13,13,13,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(13,13,13,.12) 1px,transparent 1px);background-size:20px 20px;border-bottom:4px solid #FF4F00"><small style="background:#0D0D0D">Técnico</small><b style="font-family:Archivo,'Arial Black',Arial;font-weight:900;font-stretch:125%;font-size:2.4rem">GARAJE<span style="color:#FF4F00">41</span></b></div>
+    <div class="body"><h2>Taller mecánico, motos, neumáticos</h2><p>Ficha técnica, sin adornos. Coche en plano con puntos que se tocan, presupuestador con ticket, seguimiento por matrícula y calculadora de ITV.</p><div class="tags"><span>Presupuestador</span><span>Seguimiento por matrícula</span><span>ITV</span></div></div>
+  </a>
+  <a class="card" href="voltio-electricistas/index.html">
+    <div class="sw" style="background:#0F1B2D;color:#EAF0F7;background-image:linear-gradient(90deg,transparent 0 70%,#F5B700 70% 71%,transparent 71%),linear-gradient(transparent 0 40%,rgba(245,183,0,.35) 40% 41%,transparent 41%)"><small>Directo</small><b>Voltio</b></div>
+    <div class="body"><h2>Electricistas, fontaneros y reformas</h2><p>Clara y de confianza. Todo pensado para que el cliente llame o pida presupuesto en dos toques, con una sección especial para cargadores de coche eléctrico.</p><div class="tags"><span>Servicios claros</span><span>Presupuesto por WhatsApp</span><span>Zona de trabajo</span></div></div>
+  </a>
+</main>
+<footer class="wrap">Gokazas · 698 592 047 · Webs de muestra con negocios ficticios.</footer>
+</body>
+</html>
