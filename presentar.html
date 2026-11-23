@@ -57,6 +57,39 @@ iframe{border:0;display:block;width:100%;height:100%}
 #qrc img,#qrc canvas{width:220px;height:220px}
 .qr-box .u{font-size:.75rem;color:#777;word-break:break-all;margin-top:14px}
 .qr-box button{margin-top:16px;border:0;background:#111;color:#fff;padding:12px 22px;border-radius:999px;cursor:pointer}
+/* Precios */
+.pr{position:fixed;inset:0;background:var(--bg);z-index:15;display:none;overflow:auto;-webkit-overflow-scrolling:touch;padding:calc(16px + env(safe-area-inset-top)) 16px calc(28px + env(safe-area-inset-bottom))}
+.pr.on{display:block}
+.pr-in{max-width:1000px;margin:0 auto}
+.pr-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+.pr h2{margin:0;font-size:clamp(1.7rem,4.4vw,2.6rem);line-height:1.05;letter-spacing:-.01em}
+.pr h2 em{font-style:normal;color:var(--accent)}
+.pr-sub{margin:8px 0 0;color:var(--muted)}
+.pr-ctl{display:flex;gap:8px;align-items:center}
+.iva{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.iva button{border:0;background:none;min-height:44px;padding:0 16px;cursor:pointer;color:var(--muted)}
+.iva button[aria-pressed="true"]{background:var(--text);color:var(--bg)}
+.plans,.inc{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.inc{margin-top:14px}
+.plan{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:22px 22px 12px}
+.plan.hl{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+.tag{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.plan.hl .tag{color:var(--accent)}
+.plan h3{margin:0 0 14px;font-size:1.25rem}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:12px 0;border-top:1px solid var(--line)}
+.row span{color:var(--muted)}
+.row b{font-size:1.9rem;font-weight:800;letter-spacing:-.02em;white-space:nowrap}
+.row b small{font-size:.78rem;font-weight:700;color:var(--muted);letter-spacing:0;margin-left:5px}
+.row.y b{font-size:1.15rem}
+.box{border:1px solid var(--line);border-radius:22px;padding:20px 22px}
+.box h4{margin:0 0 12px;font-size:1rem}
+.box ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.box li{display:flex;gap:10px;align-items:flex-start}
+.box li::before{content:"✓";color:var(--accent);font-weight:800;flex:none}
+.box li small{display:block;color:var(--muted);font-size:.85rem}
+.pr-note{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0;padding:0;list-style:none}
+.pr-note li{border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:.9rem;color:var(--muted)}
+.pr-note li b{color:var(--text)}
 @media (max-width:700px){.brand{display:none}.tool .t{display:none}}
 </style>
 </head>
@@ -70,6 +103,7 @@ iframe{border:0;display:block;width:100%;height:100%}
   </div>
   <div class="tools">
     <button class="tool" type="button" id="qrBtn" title="Abrir las webs en tu móvil"><span aria-hidden="true">▦</span><span class="t">En tu móvil</span></button>
+    <button class="tool" type="button" id="prBtn" title="Ver precios"><span aria-hidden="true">€</span><span class="t">Precios</span></button>
     <a class="tool" id="openBtn" href="#" target="_blank" rel="noopener" title="Abrir a pantalla completa"><span aria-hidden="true">↗</span><span class="t">Abrir</span></a>
     <button class="tool" type="button" id="fsBtn" title="Pantalla completa" hidden>⛶</button>
   </div>
@@ -81,6 +115,40 @@ iframe{border:0;display:block;width:100%;height:100%}
 <div class="qr" id="qr" role="dialog" aria-modal="true" aria-label="Código QR">
   <div class="qr-box"><h2>Míralas en tu móvil</h2><p>Apunta con la cámara a este código: se abren las cinco webs.</p><div id="qrc"></div><p class="u" id="qrUrl"></p><button type="button" id="qrClose">Cerrar</button></div>
 </div>
+<section class="pr" id="pr" role="dialog" aria-modal="true" aria-labelledby="prT">
+  <div class="pr-in">
+    <div class="pr-head">
+      <div><h2 id="prT">Lo que cuesta.<br><em>Sin permanencia.</em></h2><p class="pr-sub">Un primer pago por la web y una cuota pequeña para que siga funcionando.</p></div>
+      <div class="pr-ctl">
+        <div class="iva" role="group" aria-label="Impuestos"><button type="button" data-iva="0" aria-pressed="true">Sin IVA</button><button type="button" data-iva="1" aria-pressed="false">Con IVA</button></div>
+        <button class="tool" type="button" id="prClose" title="Volver a las webs">✕<span class="t">Volver</span></button>
+      </div>
+    </div>
+    <div class="plans">
+      <article class="plan hl"><span class="tag">Precio de lanzamiento · solo 3 negocios</span><h3>Primeros clientes</h3>
+        <div class="row"><span>Primer pago</span><b data-p="390"></b></div>
+        <div class="row"><span>Cuota</span><b data-p="29" data-m></b></div>
+        <div class="row y"><span>Primer año, todo incluido</span><b data-p="738"></b></div></article>
+      <article class="plan"><span class="tag">A partir del 4.º negocio</span><h3>Precio normal</h3>
+        <div class="row"><span>Primer pago</span><b data-p="490"></b></div>
+        <div class="row"><span>Cuota</span><b data-p="29" data-m></b></div>
+        <div class="row y"><span>Primer año, todo incluido</span><b data-p="838"></b></div></article>
+    </div>
+    <div class="inc">
+      <div class="box"><h4>El primer pago incluye</h4><ul>
+        <li><span>La web terminada<small>Con tus fotos, tus textos y tu teléfono, en 7 días</small></span></li>
+        <li><span>Visita para hacer las fotos<small>Las hacemos con el móvil en tu negocio (en Madrid)</small></span></li>
+        <li><span>El dominio, a tu nombre<small>tunegocio.es es tuyo, no nuestro</small></span></li>
+        <li><span>Alta en Google<small>Para que te encuentren en el buscador y en Maps</small></span></li></ul></div>
+      <div class="box"><h4>La cuota mensual incluye</h4><ul>
+        <li><span>Alojamiento<small>La web siempre en línea, sin que te preocupes</small></span></li>
+        <li><span>Copias de seguridad</span></li>
+        <li><span>Hasta 2 cambios pequeños al mes<small>Un precio, un horario, una foto nueva…</small></span></li>
+        <li><span>Respuesta en 48 h laborables</span></li></ul></div>
+    </div>
+    <ul class="pr-note"><li><b>Sin permanencia:</b> te das de baja cuando quieras</li><li><b>Para empezar:</b> una señal del 30 %</li><li>Lo que no entra en la cuota se presupuesta aparte</li><li id="ivaNote"></li></ul>
+  </div>
+</section>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
 (function(){
@@ -111,6 +179,19 @@ iframe{border:0;display:block;width:100%;height:100%}
     qr.classList.add('on')});
   document.getElementById('qrClose').addEventListener('click',function(){qr.classList.remove('on')});
   qr.addEventListener('click',function(e){if(e.target===qr)qr.classList.remove('on')});
+  var pr=document.getElementById('pr'),iva=0;
+  function eur(n){var c=Math.round(n*(iva?121:100)),e=String(Math.floor(c/100)).replace(/\B(?=(\d{3})+(?!\d))/g,'.');return e+(c%100?','+String(c%100+100).slice(1):'')+' €'}
+  function paint(){
+    Array.prototype.forEach.call(pr.querySelectorAll('[data-p]'),function(b){b.innerHTML=eur(+b.dataset.p)+(b.hasAttribute('data-m')?'/mes':'')+'<small>'+(iva?'IVA incl.':'+ IVA')+'</small>'});
+    document.getElementById('ivaNote').textContent=iva?'Precios con el IVA del 21 % incluido':'Precios sin IVA (21 %)';
+    Array.prototype.forEach.call(pr.querySelectorAll('.iva button'),function(x){x.setAttribute('aria-pressed',+x.dataset.iva===iva)})}
+  pr.querySelector('.iva').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;iva=+b.dataset.iva;paint()});
+  function openPr(){paint();pr.classList.add('on');pr.scrollTop=0;document.getElementById('prClose').focus()}
+  function closePr(){pr.classList.remove('on');document.getElementById('prBtn').focus()}
+  document.getElementById('prBtn').addEventListener('click',openPr);
+  document.getElementById('prClose').addEventListener('click',closePr);
+  addEventListener('keydown',function(e){if(e.key==='Escape'){if(pr.classList.contains('on'))closePr();qr.classList.remove('on')}});
+  if(q.has('precios'))openPr();
   build();
 })();
 </script>
