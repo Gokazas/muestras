@@ -12,6 +12,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
+/*nx*/html{overflow-x:hidden}
 :root{
   --paper:#ECECE6; --conc:#DCDCD4; --ink:#0D0D0D; --mid:#5A5A55; --orange:#FF4F00; --orange-ink:#0D0D0D; --ok:#1E7F3E; --plate:#003399;
   --sans:"Archivo","Arial Narrow",Arial,sans-serif; --mono:"JetBrains Mono",ui-monospace,"Cascadia Mono",Consolas,monospace;
@@ -68,7 +69,7 @@ section[id]{scroll-margin-top:96px}
 @media (min-width:1000px){.hero{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}.hero h1{font-size:clamp(4rem,6.3vw,8.2rem)}}
 .hero-t{padding:26px 20px 24px;display:flex;flex-direction:column;gap:22px;border-bottom:var(--b)}
 @media (min-width:1000px){.hero-t{border-bottom:0;border-right:var(--b)}}
-.hero h1{font:900 clamp(4.2rem,15vw,9.6rem)/.78 var(--sans);font-stretch:125%;letter-spacing:-.04em;text-transform:uppercase}
+.hero h1{font:900 clamp(3.2rem,15vw,9.6rem)/.78 var(--sans);font-stretch:125%;letter-spacing:-.04em;text-transform:uppercase}
 .hero h1 span{display:block;color:transparent;-webkit-text-stroke:3px var(--ink);font-size:1.5em;line-height:.8}
 .hero h1 span b{color:var(--orange);-webkit-text-stroke:0}
 .hero p.lead{font:500 1.15rem/1.4 var(--sans);max-width:30ch}
@@ -192,7 +193,8 @@ section[id]{scroll-margin-top:96px}
 .tbl th{font:500 .72rem var(--mono);text-transform:uppercase;text-align:left;padding:10px 20px;border-bottom:var(--b);background:var(--conc)}
 .tbl td{padding:16px 20px;border-bottom:1px solid var(--ink);vertical-align:top}
 .tbl tr:last-child td{border-bottom:0}
-.tbl td:first-child{font:500 .8rem var(--mono);color:var(--mid);width:80px}
+.tbl td:first-child{font:500 .8rem var(--mono);color:var(--mid);width:80px;white-space:nowrap}
+@media (max-width:699px){.tbl td,.tbl th{padding-left:14px;padding-right:14px}.tbl td:first-child{width:56px}}
 .tbl td:nth-child(2) b{display:block;font:800 1.15rem/1.15 var(--sans);font-stretch:112%;text-transform:uppercase}
 .tbl td:nth-child(2) span{font-size:.92rem;color:var(--mid)}
 .tbl td.r{text-align:right;font:500 .95rem var(--mono);white-space:nowrap}
@@ -508,5 +510,6 @@ dialog .btn{width:100%;border-top:var(--b)}
   document.addEventListener('click',function(e){var a=e.target.closest('[data-demo]');if(!a)return;e.preventDefault();var m=M[a.dataset.demo];$('#termT').textContent=m[0];$('#termP').textContent=a.dataset.msg?'«'+a.dataset.msg+'»':m[1];term.classList.add('on');clearTimeout(tt);tt=setTimeout(function(){term.classList.remove('on')},4200)});
 })();
 </script>
+<script>(function(){if(!/[?&]desde=portada/.test(location.search))return;var a=document.createElement('a');a.href='../index.html';a.textContent='← Todas las webs';a.setAttribute('aria-label','Volver a todas las webs de muestra');function pos(){a.style.bottom=(innerWidth<900?'84px':'20px')}a.style.cssText='position:fixed;left:12px;z-index:2147483000;background:#111214;color:#fff;font:700 14px/1 system-ui,-apple-system,sans-serif;padding:12px 15px;border-radius:999px;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.18)';a.style.transition='transform .3s,opacity .3s';pos();addEventListener('resize',pos);document.body.appendChild(a);var ly=scrollY;addEventListener('scroll',function(){var y=scrollY;if(y>ly+8&&y>120){a.style.transform='translateY(140%)';a.style.opacity='0'}else if(y<ly-8||y<120){a.style.transform='none';a.style.opacity='1'}ly=y},{passive:true})})();</script>
 </body>
 </html>

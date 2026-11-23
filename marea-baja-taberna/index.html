@@ -12,6 +12,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..900,100;1,9..144,400..900,100&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
 <style>
+/*nx*/html{overflow-x:hidden}
 :root{
   --cream:#F5ECDC; --cream-2:#EADDC6; --navy:#0F2D4A; --navy-2:#173B5E; --ink:#0B1F33; --text:#22384D; --muted:#5B6B7A;
   --coral:#E4572E; --coral-2:#C9431D; --mustard:#F2B544; --teal:#2E7D7A; --board:#1E2B26;
@@ -67,7 +68,7 @@ section[id]{scroll-margin-top:70px}
 .stamp .core svg{width:60%}
 @keyframes spin{to{transform:rotate(360deg)}}
 .float{position:absolute;z-index:1;animation:bob 6s ease-in-out infinite}
-@media (max-width:760px){.float{display:none}}
+@media (max-width:760px){.float{display:none}.ticket .top svg.deco{width:96px;top:12px;right:10px;opacity:.35}.ticket h3,.ticket p{max-width:100%;position:relative}}
 @keyframes bob{50%{transform:translateY(-14px) rotate(4deg)}}
 .waves{position:absolute;left:0;right:0;bottom:-2px;height:150px;z-index:2}
 .waves svg{position:absolute;bottom:0;width:200%;height:100%}
@@ -130,7 +131,7 @@ section[id]{scroll-margin-top:70px}
 .dish p{font-size:.9rem;color:var(--muted);margin-top:4px}
 .dish .al{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
 .dish .al span{font-size:.7rem;font-weight:700;border-radius:6px;padding:3px 7px;background:#F1ECE3;color:#5B5246}
-.dish .star{font-size:.7rem;font-weight:700;color:#fff;background:var(--coral);border-radius:6px;padding:3px 7px;margin-left:6px;vertical-align:middle;font-family:var(--sans)}
+.dish .star{white-space:nowrap;display:inline-block;font-size:.7rem;font-weight:700;color:#fff;background:var(--coral);border-radius:6px;padding:3px 7px;margin-left:6px;vertical-align:middle;font-family:var(--sans)}
 .menu-foot{padding:0 22px 22px;font-size:.84rem;color:var(--muted)}
 .empty{grid-column:1/-1;padding:30px 0;text-align:center;color:var(--muted);display:none}
 
@@ -509,5 +510,6 @@ dialog .btn{margin-top:18px}
   document.addEventListener('click',function(e){var a=e.target.closest('[data-demo]');if(!a)return;e.preventDefault();var m=M[a.dataset.demo];toast.innerHTML=m[0]+'<small>'+m[1]+'</small>';toast.classList.add('on');clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove('on')},3400)});
 })();
 </script>
+<script>(function(){if(!/[?&]desde=portada/.test(location.search))return;var a=document.createElement('a');a.href='../index.html';a.textContent='← Todas las webs';a.setAttribute('aria-label','Volver a todas las webs de muestra');function pos(){a.style.bottom=(innerWidth<900?'84px':'20px')}a.style.cssText='position:fixed;left:12px;z-index:2147483000;background:#111214;color:#fff;font:700 14px/1 system-ui,-apple-system,sans-serif;padding:12px 15px;border-radius:999px;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.18)';a.style.transition='transform .3s,opacity .3s';pos();addEventListener('resize',pos);document.body.appendChild(a);var ly=scrollY;addEventListener('scroll',function(){var y=scrollY;if(y>ly+8&&y>120){a.style.transform='translateY(140%)';a.style.opacity='0'}else if(y<ly-8||y<120){a.style.transform='none';a.style.opacity='1'}ly=y},{passive:true})})();</script>
 </body>
 </html>

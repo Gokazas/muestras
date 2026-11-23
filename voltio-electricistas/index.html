@@ -13,6 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
 <script>document.documentElement.className += " js";</script>
 <style>
+/*nx*/html{overflow-x:hidden}
 :root{
   --night:#0F1B2D; --night-2:#15263E; --night-3:#1F3554; --deep:#0A1320;
   --bg:#F5F7FA; --card:#FFFFFF; --line:#DCE3EC;
@@ -810,7 +811,7 @@ section[id]{scroll-margin-top:68px}
                 <tr><th scope="row">Sábado y domingo</th><td class="closed">Cerrado</td></tr>
               </tbody>
             </table>
-            <p class="info__small">Horario de la ficha de Google, pendiente de confirmar.</p>
+            <p class="info__small">Urgencias: llámanos y te decimos cuándo podemos ir.</p>
           </div>
 
           <div class="info__blk">
@@ -923,5 +924,6 @@ section[id]{scroll-margin-top:68px}
 </script>
 <div id="demoNote" role="status" aria-live="polite" style="position:fixed;left:50%;bottom:92px;transform:translate(-50%,16px);opacity:0;pointer-events:none;z-index:999;max-width:min(420px,calc(100% - 32px));background:#0F1B2D;color:#EAF0F7;border:2px solid #F5B700;padding:14px 18px;border-radius:14px;font:500 .92rem/1.4 Inter,system-ui,sans-serif;transition:all .3s"></div>
 <script>(function(){var n=document.getElementById('demoNote'),t;document.addEventListener('click',function(e){var a=e.target.closest('a[href^="tel:"],a[href*="wa.me"],a[href*="google.com/maps"]');if(!a)return;e.preventDefault();var h=a.getAttribute('href');n.innerHTML=/^tel:/.test(h)?'<b>Llamaría a tu teléfono</b><br>En tu web, un toque y te llaman directamente.':(/wa\.me/.test(h)?'<b>Abriría tu WhatsApp</b><br>Con el mensaje ya escrito para pedir presupuesto.':'<b>Abriría Google Maps</b><br>Con la ruta hasta tu negocio.');n.style.opacity=1;n.style.transform='translate(-50%,0)';clearTimeout(t);t=setTimeout(function(){n.style.opacity=0;n.style.transform='translate(-50%,16px)'},3200)},true)})();</script>
+<script>(function(){if(!/[?&]desde=portada/.test(location.search))return;var a=document.createElement('a');a.href='../index.html';a.textContent='← Todas las webs';a.setAttribute('aria-label','Volver a todas las webs de muestra');function pos(){a.style.bottom=(innerWidth<900?'84px':'20px')}a.style.cssText='position:fixed;left:12px;z-index:2147483000;background:#111214;color:#fff;font:700 14px/1 system-ui,-apple-system,sans-serif;padding:12px 15px;border-radius:999px;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.18)';a.style.transition='transform .3s,opacity .3s';pos();addEventListener('resize',pos);document.body.appendChild(a);var ly=scrollY;addEventListener('scroll',function(){var y=scrollY;if(y>ly+8&&y>120){a.style.transform='translateY(140%)';a.style.opacity='0'}else if(y<ly-8||y<120){a.style.transform='none';a.style.opacity='1'}ly=y},{passive:true})})();</script>
 </body>
 </html>

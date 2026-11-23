@@ -2,72 +2,90 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#111214">
 <title>Gokazas · Webs de muestra</title>
+<meta name="description" content="Cinco estilos de web para negocios de barrio. Tu web, en 7 días.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;600;700&family=Syne:wght@800&family=Unbounded:wght@800&family=Archivo:wdth,wght@125,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;600;700;800&family=Syne:wght@800&family=Unbounded:wght@800&family=Fraunces:opsz,wght@9..144,800&family=Archivo:wdth,wght@125,900&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#111214;--card:#1A1C1F;--line:#2A2D31;--text:#E8E6E1;--muted:#9A9DA2;--accent:#F2C38B}
+:root{--bg:#111214;--card:#1A1C1F;--line:#2A2D31;--text:#ECEAE5;--muted:#A3A6AB;--accent:#F2C38B;--wa:#1FAF5A}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font:400 1rem/1.6 "Manrope",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+html{overflow-x:hidden;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1rem/1.55 "Manrope",system-ui,sans-serif;-webkit-font-smoothing:antialiased;padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+a{color:inherit}
 .wrap{width:min(1160px,calc(100% - 32px));margin-inline:auto}
-header{padding:64px 0 40px}
-.brand{font:600 .8rem/1 "Manrope";letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
-h1{font:400 clamp(2.8rem,8vw,6rem)/.95 "Instrument Serif",Georgia,serif;letter-spacing:-.02em;margin:18px 0 20px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+.brand{font:800 1.15rem/1 "Manrope";letter-spacing:.01em;text-decoration:none}
+.brand span{color:var(--accent)}
+.top a.tel{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-weight:700;font-size:.92rem}
+.hero{padding:22px 0 26px}
+h1{font:400 clamp(2.6rem,9vw,5.6rem)/.98 "Instrument Serif",Georgia,serif;letter-spacing:-.015em;margin:0 0 14px}
 h1 em{color:var(--accent)}
-header p{color:var(--muted);max-width:560px;font-size:1.08rem}
-.offer{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
-.offer span{border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:.88rem}
-.offer b{color:var(--accent)}
-.grid{display:grid;gap:18px;padding-bottom:80px}
-@media (min-width:800px){.grid{grid-template-columns:1fr 1fr}}
-@media (min-width:1100px){.grid{grid-template-columns:repeat(6,1fr)}.grid .card{grid-column:span 2}.grid .card:nth-child(n+4){grid-column:span 3}}
-a.card{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:transform .3s cubic-bezier(.2,.8,.2,1),border-color .3s}
-a.card:hover{transform:translateY(-4px);border-color:#44484E}
-a.card:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.sw{height:180px;position:relative;display:flex;align-items:flex-end;padding:20px}
-.sw b{font:400 2.6rem/1 "Instrument Serif",Georgia,serif}
-.sw small{position:absolute;top:16px;right:16px;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;background:rgba(0,0,0,.35);color:#fff;padding:5px 10px;border-radius:999px}
-.body{padding:20px 22px 24px}
-.body h2{margin:0 0 6px;font-size:1.05rem}
-.body p{margin:0 0 14px;color:var(--muted);font-size:.93rem}
-.tags{display:flex;flex-wrap:wrap;gap:6px}
-.tags span{font-size:.76rem;border:1px solid var(--line);border-radius:999px;padding:3px 10px;color:#C9CBCF}
-footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--muted);font-size:.85rem}
+.hero p{color:var(--muted);max-width:520px;margin:0;font-size:1.05rem}
+.how{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 0;padding:0;list-style:none;counter-reset:h}
+.how li{counter-increment:h;display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:999px;padding:8px 14px 8px 8px;font-size:.9rem}
+.how li::before{content:counter(h);display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--accent);color:#111;font-weight:800;font-size:.82rem}
+.present{display:none;align-items:center;gap:10px;margin-top:22px;background:var(--accent);color:#111;text-decoration:none;font-weight:800;padding:14px 20px;border-radius:999px}
+@media (min-width:768px){.present{display:inline-flex}}
+.hint{display:flex;align-items:center;gap:10px;margin:8px 0 14px;color:var(--muted);font-size:.92rem}
+.hint b{color:var(--text)}
+.list{display:grid;gap:12px;padding-bottom:30px}
+@media (min-width:800px){.list{grid-template-columns:1fr 1fr;gap:18px}}
+@media (min-width:1100px){.list{grid-template-columns:repeat(6,1fr)}.list .card{grid-column:span 2}.list .card:nth-child(n+4){grid-column:span 3}}
+a.card{display:grid;grid-template-columns:118px 1fr;text-decoration:none;background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:transform .25s,border-color .25s;min-height:116px}
+a.card:active{transform:scale(.98)}
+a.card:hover{border-color:#4A4E54}
+@media (min-width:800px){a.card{grid-template-columns:1fr;grid-template-rows:170px auto}}
+.sw{position:relative;display:flex;align-items:flex-end;padding:10px;overflow:hidden}
+.sw b{font-size:.8rem;line-height:1.05;position:relative;overflow-wrap:anywhere}
+@media (min-width:800px){.sw{padding:18px}.sw b{font-size:2.4rem}}
+.sw .n{position:absolute;top:10px;left:12px;font:800 .72rem/1 "Manrope";opacity:.7}
+.body{padding:14px 16px 14px 14px;display:flex;flex-direction:column;justify-content:center;gap:4px;min-width:0}
+@media (min-width:800px){.body{padding:18px 20px 20px}}
+.body .style{font:800 .7rem/1 "Manrope";letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.body h2{margin:0;font-size:1.04rem;line-height:1.25}
+.body p{margin:2px 0 0;color:var(--muted);font-size:.88rem;line-height:1.4}
+.body .go{margin-top:8px;font-weight:800;font-size:.9rem;display:inline-flex;gap:6px;align-items:center}
+@media (max-width:799px){.body p{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}}
+footer{border-top:1px solid var(--line);padding:22px 0 30px;color:var(--muted);font-size:.85rem}
+.cta{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:1fr 1.4fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(17,18,20,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+.cta a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:52px;border-radius:999px;text-decoration:none;font-weight:800}
+.cta .c1{border:1px solid var(--line)}
+.cta .c2{background:var(--wa);color:#fff}
+@media (min-width:900px){.cta{left:auto;right:24px;bottom:24px;width:420px;border:1px solid var(--line);border-radius:999px;padding:8px}body{padding-bottom:0}}
 </style>
 </head>
 <body>
-<header class="wrap">
-  <p class="brand">Gokazas · Webs para negocios de barrio</p>
-  <h1>Cinco estilos.<br><em>Tu web, en 7 días.</em></h1>
-  <p>Estas webs son de muestra, con negocios inventados. Sirven para que veas cómo trabajamos. La tuya llevará tus fotos, tus textos y tu teléfono.</p>
-  <p style="margin-top:22px"><a href="presentar.html" style="display:inline-flex;gap:10px;align-items:center;background:#F2C38B;color:#111214;text-decoration:none;font-weight:700;padding:14px 20px">▶ Modo presentación: móvil y ordenador</a></p>
-  <div class="offer"><span><b>7 días</b> desde las fotos hasta la web publicada</span><span>Pensadas primero para el <b>móvil</b></span><span>Botones directos a <b>llamar y WhatsApp</b></span></div>
-</header>
-<main class="wrap grid">
-  <a class="card" href="ventanal-cristaleria/index.html">
-    <div class="sw" style="background:linear-gradient(90deg,#F6D6C4,#B5DAEE 30%,#F4D9A6 50%,#C97590 70%,#2B2C52 86%,#0D1020);color:#14171A;border:8px solid #1E2124"><small style="background:#1E2124">Horizontal</small><b style="font-family:Unbounded,'Arial Black',Arial;font-weight:800;font-size:2rem;letter-spacing:-.02em">VENTANAL</b></div>
-    <div class="body"><h2>Cristalería, cerramientos, reformas</h2><p>Marco de aluminio y cielo que cambia del amanecer a la noche. Cortina de cristal que se abre, espejo empañado que se limpia con el dedo y proyectos con filtros.</p><div class="tags"><span>Cortina que se abre</span><span>Espejo antivaho</span><span>Proyectos con filtros</span></div></div>
-  </a>
-  <a class="card" href="marea-baja-taberna/index.html">
-    <div class="sw" style="background:#0F2D4A;color:#F5ECDC;background-image:radial-gradient(circle at 70% 34%,#E4572E 0 34px,transparent 35px),linear-gradient(transparent 70%,#2E7D7A 70% 80%,#E4572E 80% 88%,#F5ECDC 88%)"><small>Atrevido</small><b>Marea Baja</b></div>
-    <div class="body"><h2>Bar, taberna o restaurante</h2><p>Colores fuertes y mucho carácter. Pizarra del día, carta con filtros de alérgenos y reservas que llegan escritas por WhatsApp.</p><div class="tags"><span>Carta digital</span><span>Reserva por WhatsApp</span><span>Abierto ahora</span></div></div>
-  </a>
-  <a class="card" href="nacar-peluqueria/index.html">
-    <div class="sw" style="background:#F2EDE3;color:#0078BF;background-image:radial-gradient(circle,rgba(255,72,176,.55) 2px,transparent 2.4px);background-size:10px 10px"><small style="background:#FF48B0;color:#1C1B1A">Fanzine</small><b style="font-family:Syne,'Arial Black',Arial;font-weight:800;font-size:2.6rem;text-shadow:3px 2px 0 rgba(255,72,176,.8)">Nácar</b></div>
-    <div class="body"><h2>Peluquería, estética, moda, florista</h2><p>Fanzine impreso en risografía: dos tintas, papel rasgado, cinta adhesiva y notas a mano. Galería con hoja de contactos, precios en libreta y cartel con papelitos para arrancar.</p><div class="tags"><span>Hoja de contactos</span><span>Precios en libreta</span><span>Cita en una frase</span></div></div>
-  </a>
-  <a class="card" href="garaje41-taller/index.html">
-    <div class="sw" style="background:#ECECE6;color:#0D0D0D;background-image:linear-gradient(rgba(13,13,13,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(13,13,13,.12) 1px,transparent 1px);background-size:20px 20px;border-bottom:4px solid #FF4F00"><small style="background:#0D0D0D">Técnico</small><b style="font-family:Archivo,'Arial Black',Arial;font-weight:900;font-stretch:125%;font-size:2.4rem">GARAJE<span style="color:#FF4F00">41</span></b></div>
-    <div class="body"><h2>Taller mecánico, motos, neumáticos</h2><p>Ficha técnica, sin adornos. Coche en plano con puntos que se tocan, presupuestador con ticket, seguimiento por matrícula y calculadora de ITV.</p><div class="tags"><span>Presupuestador</span><span>Seguimiento por matrícula</span><span>ITV</span></div></div>
-  </a>
-  <a class="card" href="voltio-electricistas/index.html">
-    <div class="sw" style="background:#0F1B2D;color:#EAF0F7;background-image:linear-gradient(90deg,transparent 0 70%,#F5B700 70% 71%,transparent 71%),linear-gradient(transparent 0 40%,rgba(245,183,0,.35) 40% 41%,transparent 41%)"><small>Directo</small><b>Voltio</b></div>
-    <div class="body"><h2>Electricistas, fontaneros y reformas</h2><p>Clara y de confianza. Todo pensado para que el cliente llame o pida presupuesto en dos toques, con una sección especial para cargadores de coche eléctrico.</p><div class="tags"><span>Servicios claros</span><span>Presupuesto por WhatsApp</span><span>Zona de trabajo</span></div></div>
-  </a>
-</main>
-<footer class="wrap">Gokazas · 698 592 047 · Webs de muestra con negocios ficticios.</footer>
+<div class="wrap">
+  <header class="top"><a class="brand" href="index.html">Gokazas<span>.</span></a><a class="tel" href="tel:+34698592047">📞 698 592 047</a></header>
+  <section class="hero">
+    <h1>Elige un estilo.<br><em>Tu web, en 7 días.</em></h1>
+    <p>Son webs de muestra con negocios inventados. La tuya llevará tus fotos, tus textos y tu teléfono.</p>
+    <ol class="how"><li>Eliges el estilo</li><li>Nos das fotos y datos</li><li>En 7 días, publicada</li></ol>
+    <a class="present" href="presentar.html">▶ Modo presentación: móvil y ordenador</a>
+  </section>
+  <p class="hint">👇 <span><b>Toca una</b> para verla como la verán tus clientes.</span></p>
+  <main class="list" id="list"></main>
+</div>
+<footer><div class="wrap">Gokazas · 698 592 047 · Webs de muestra con negocios ficticios.</div></footer>
+<nav class="cta" aria-label="Contactar con Gokazas">
+  <a class="c1" href="tel:+34698592047">Llamar</a>
+  <a class="c2" href="https://wa.me/34698592047?text=Hola%2C%20he%20visto%20las%20webs%20de%20muestra%20de%20Gokazas%20y%20me%20interesa%20una%20para%20mi%20negocio">Quiero mi web · WhatsApp</a>
+</nav>
+<script>
+(function(){
+  var W=[
+    ['ventanal-cristaleria','Ventanal','Editorial','Cristalería, cerramientos y reformas','Luminosa y elegante: cortina de cristal que se abre, espejo empañado que se limpia con el dedo y proyectos con filtros.','linear-gradient(160deg,#F6D6C4,#D3E7F1 45%,#F4D9A6 70%,#2B2C52)','#14171A',"800 .95em Unbounded,'Arial Black',sans-serif"],
+    ['marea-baja-taberna','Marea Baja','Atrevido','Bar, taberna o restaurante','Colores fuertes y mucho carácter: pizarra del día, carta con filtro de alérgenos y reservas por WhatsApp.','radial-gradient(circle at 78% 30%,#E4572E 0 22%,transparent 23%),linear-gradient(#0F2D4A 0 62%,#2E7D7A 62% 72%,#E4572E 72% 82%,#F5ECDC 82%)','#0F2D4A',"800 1em Fraunces,Georgia,serif"],
+    ['nacar-peluqueria','Nácar','Fanzine','Peluquería, estética, moda o florista','Fanzine en dos tintas: papel rasgado, cinta adhesiva, precios en libreta y cita escrita en una frase.','radial-gradient(circle,rgba(255,72,176,.55) 2px,transparent 2.4px) 0 0/9px 9px,#F2EDE3','#0078BF',"800 1.05em Syne,'Arial Black',sans-serif"],
+    ['garaje41-taller','Garaje 41','Técnico','Taller mecánico, motos o neumáticos','Ficha técnica sin adornos: coche en plano, presupuestador, seguimiento por matrícula y calculadora de ITV.','linear-gradient(rgba(13,13,13,.14) 1px,transparent 1px) 0 0/16px 16px,linear-gradient(90deg,rgba(13,13,13,.14) 1px,transparent 1px) 0 0/16px 16px,#ECECE6','#0D0D0D',"900 .95em Archivo,'Arial Black',sans-serif"],
+    ['voltio-electricistas','Voltio','Directo','Electricistas, fontaneros o reformas','Clara y de confianza: el cliente llama o pide presupuesto en dos toques. Con sección para cargadores de coche.','linear-gradient(90deg,transparent 0 72%,#F5B700 72% 74%,transparent 74%),#0F1B2D','#EAF0F7',"700 1em Manrope,sans-serif"]];
+  document.getElementById('list').innerHTML=W.map(function(w,i){return '<a class="card" href="'+w[0]+'/index.html?desde=portada"><div class="sw" style="background:'+w[5]+';color:'+w[6]+'"><span class="n">0'+(i+1)+'</span><b style="font:'+w[7]+'">'+w[1]+'</b></div><div class="body"><span class="style">'+w[2]+'</span><h2>'+w[3]+'</h2><p>'+w[4]+'</p><span class="go">Ver la web →</span></div></a>'}).join('');
+})();
+</script>
 </body>
 </html>

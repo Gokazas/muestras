@@ -69,7 +69,7 @@ iframe{border:0;display:block;width:100%;height:100%}
     <button type="button" data-mode="laptop" aria-pressed="false"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 19h20"/></svg>Ordenador</button>
   </div>
   <div class="tools">
-    <button class="tool" type="button" id="qrBtn" title="Ábrelo en tu móvil"><span aria-hidden="true">▦</span><span class="t">En tu móvil</span></button>
+    <button class="tool" type="button" id="qrBtn" title="Abrir las webs en tu móvil"><span aria-hidden="true">▦</span><span class="t">En tu móvil</span></button>
     <a class="tool" id="openBtn" href="#" target="_blank" rel="noopener" title="Abrir a pantalla completa"><span aria-hidden="true">↗</span><span class="t">Abrir</span></a>
     <button class="tool" type="button" id="fsBtn" title="Pantalla completa" hidden>⛶</button>
   </div>
@@ -79,7 +79,7 @@ iframe{border:0;display:block;width:100%;height:100%}
   <p class="cap" id="cap"></p>
 </main>
 <div class="qr" id="qr" role="dialog" aria-modal="true" aria-label="Código QR">
-  <div class="qr-box"><h2>Ábrelo en tu móvil</h2><p>Apunta con la cámara del móvil a este código.</p><div id="qrc"></div><p class="u" id="qrUrl"></p><button type="button" id="qrClose">Cerrar</button></div>
+  <div class="qr-box"><h2>Míralas en tu móvil</h2><p>Apunta con la cámara a este código: se abren las cinco webs.</p><div id="qrc"></div><p class="u" id="qrUrl"></p><button type="button" id="qrClose">Cerrar</button></div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
@@ -106,7 +106,7 @@ iframe{border:0;display:block;width:100%;height:100%}
   var fs=document.getElementById('fsBtn'),de=document.documentElement;
   if(de.requestFullscreen||de.webkitRequestFullscreen){fs.hidden=false;fs.addEventListener('click',function(){if(document.fullscreenElement||document.webkitFullscreenElement){(document.exitFullscreen||document.webkitExitFullscreen).call(document)}else{(de.requestFullscreen||de.webkitRequestFullscreen).call(de)}setTimeout(fit,300)})}
   var qr=document.getElementById('qr'),made='';
-  document.getElementById('qrBtn').addEventListener('click',function(){var u=absUrl();document.getElementById('qrUrl').textContent=u;
+  document.getElementById('qrBtn').addEventListener('click',function(){var u=new URL('index.html',location.href).href;document.getElementById('qrUrl').textContent=u;
     if(made!==u){var box=document.getElementById('qrc');box.innerHTML='';if(window.QRCode){new QRCode(box,{text:u,width:440,height:440,correctLevel:QRCode.CorrectLevel.M})}else{box.textContent='Sin conexión: no se puede crear el código.'}made=u}
     qr.classList.add('on')});
   document.getElementById('qrClose').addEventListener('click',function(){qr.classList.remove('on')});
