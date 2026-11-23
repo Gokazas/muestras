@@ -81,6 +81,9 @@ iframe{border:0;display:block;width:100%;height:100%}
 .row b{font-size:1.9rem;font-weight:800;letter-spacing:-.02em;white-space:nowrap}
 .row b small{font-size:.78rem;font-weight:700;color:var(--muted);letter-spacing:0;margin-left:5px}
 .row.y b{font-size:1.15rem}
+.row b i{font-style:normal}
+.row b s.was{font-size:1rem;font-weight:600;color:var(--muted);margin-right:10px;letter-spacing:0}
+.save{margin:2px 0 10px;color:var(--accent);font-weight:700;font-size:.9rem}
 .box{border:1px solid var(--line);border-radius:22px;padding:20px 22px}
 .box h4{margin:0 0 12px;font-size:1rem}
 .box ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
@@ -120,19 +123,19 @@ iframe{border:0;display:block;width:100%;height:100%}
     <div class="pr-head">
       <div><h2 id="prT">Lo que cuesta.<br><em>Sin permanencia.</em></h2><p class="pr-sub">Un primer pago por la web y una cuota pequeña para que siga funcionando.</p></div>
       <div class="pr-ctl">
-        <div class="iva" role="group" aria-label="Impuestos"><button type="button" data-iva="0" aria-pressed="true">Sin IVA</button><button type="button" data-iva="1" aria-pressed="false">Con IVA</button></div>
         <button class="tool" type="button" id="prClose" title="Volver a las webs">✕<span class="t">Volver</span></button>
       </div>
     </div>
     <div class="plans">
       <article class="plan hl"><span class="tag">Precio de lanzamiento · solo 3 negocios</span><h3>Primeros clientes</h3>
-        <div class="row"><span>Primer pago</span><b data-p="390"></b></div>
+        <div class="row"><span>Primer pago</span><b><s class="was">550 €</s><i data-p="450"></i></b></div>
         <div class="row"><span>Cuota</span><b data-p="29" data-m></b></div>
-        <div class="row y"><span>Primer año, todo incluido</span><b data-p="738"></b></div></article>
+        <div class="row y"><span>Primer año, todo incluido</span><b data-p="798"></b></div>
+        <p class="save">Te ahorras 100 € frente al precio normal</p></article>
       <article class="plan"><span class="tag">A partir del 4.º negocio</span><h3>Precio normal</h3>
-        <div class="row"><span>Primer pago</span><b data-p="490"></b></div>
+        <div class="row"><span>Primer pago</span><b data-p="550"></b></div>
         <div class="row"><span>Cuota</span><b data-p="29" data-m></b></div>
-        <div class="row y"><span>Primer año, todo incluido</span><b data-p="838"></b></div></article>
+        <div class="row y"><span>Primer año, todo incluido</span><b data-p="898"></b></div></article>
     </div>
     <div class="inc">
       <div class="box"><h4>El primer pago incluye</h4><ul>
@@ -179,13 +182,10 @@ iframe{border:0;display:block;width:100%;height:100%}
     qr.classList.add('on')});
   document.getElementById('qrClose').addEventListener('click',function(){qr.classList.remove('on')});
   qr.addEventListener('click',function(e){if(e.target===qr)qr.classList.remove('on')});
-  var pr=document.getElementById('pr'),iva=0;
-  function eur(n){var c=Math.round(n*(iva?121:100)),e=String(Math.floor(c/100)).replace(/\B(?=(\d{3})+(?!\d))/g,'.');return e+(c%100?','+String(c%100+100).slice(1):'')+' €'}
+  var pr=document.getElementById('pr');
   function paint(){
-    Array.prototype.forEach.call(pr.querySelectorAll('[data-p]'),function(b){b.innerHTML=eur(+b.dataset.p)+(b.hasAttribute('data-m')?'/mes':'')+'<small>'+(iva?'IVA incl.':'+ IVA')+'</small>'});
-    document.getElementById('ivaNote').textContent=iva?'Precios con el IVA del 21 % incluido':'Precios sin IVA (21 %)';
-    Array.prototype.forEach.call(pr.querySelectorAll('.iva button'),function(x){x.setAttribute('aria-pressed',+x.dataset.iva===iva)})}
-  pr.querySelector('.iva').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;iva=+b.dataset.iva;paint()});
+    Array.prototype.forEach.call(pr.querySelectorAll('[data-p]'),function(b){b.innerHTML=b.dataset.p+' €'+(b.hasAttribute('data-m')?'/mes':'')+'<small>IVA incl.</small>'});
+    document.getElementById('ivaNote').textContent='Todos los precios llevan el IVA incluido'}
   function openPr(){paint();pr.classList.add('on');pr.scrollTop=0;document.getElementById('prClose').focus()}
   function closePr(){pr.classList.remove('on');document.getElementById('prBtn').focus()}
   document.getElementById('prBtn').addEventListener('click',openPr);
